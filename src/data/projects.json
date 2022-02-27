@@ -1,0 +1,48 @@
+[
+    {
+        "id": "1",
+        "name": "Overclock E-shop",
+        "image": "https://github.com/Gustavohps10/overclock-eshop/raw/master/views/assets/images/to-readme/buying.gif",
+        "github": "https://github.com/Gustavohps10/overclock-eshop",
+        "website": "http://overclockeshop.ga/",
+        "description": "Um sistema com as principais funcionalidades de um e-commerce"
+    },
+    {
+        "id": "2",
+        "name": "Speaker",
+        "image": "https://user-images.githubusercontent.com/61752235/153693098-5d065a9b-5392-441f-9fbb-d3bf4e869d9c.gif",
+        "github": "https://github.com/Gustavohps10/speaker",
+        "description": "Plataforma de publicação de áudio online. Ouça suas músicas e podcasts favoritos"
+    },
+    {
+        "id": "3",
+        "name": "Sistema de reserva de veículos",
+        "image": "https://github.com/Gustavohps10/tcc-senai/raw/main/Projeto/images/demo-reserva.gif",
+        "github": "https://github.com/Gustavohps10/tcc-senai",
+        "website": "http://reserva-de-veiculos.ga/",
+        "description": "Sistema que ajuda no gerenciamento de veículos de um estacionamento"
+    },
+    {
+        "id": "4",
+        "name": "Flappy Mario",
+        "image": "https://user-images.githubusercontent.com/61752235/155443117-d751c1bf-7fab-47b2-96c9-33da380ee201.PNG",
+        "github": "https://github.com/Gustavohps10/jogos/tree/main/mario_game",
+        "website": "https://flappymario.vercel.app/",
+        "description": "Game inspirado no Flappy Bird com tema de Super Mario World"
+    },
+    {
+        "id": "5",
+        "name": "Letmeask",
+        "image": "https://user-images.githubusercontent.com/61752235/155585407-c1438cfe-8bfd-4a3e-a272-e1e697bb6ce7.PNG",
+        "github": "https://github.com/Gustavohps10/letmeask",
+        "description": "Responda sua audiencia em tempo real"
+    },
+    {
+        "id": "6",
+        "name": "Games CRUD - Django",
+        "image": "https://user-images.githubusercontent.com/61752235/151655747-2a9cde40-ba66-4736-af03-60643eac0fe8.PNG",
+        "github": "https://github.com/Gustavohps10/CRUD-Django",
+        "description": "Sistema simples onde você pode Cadastrar, Ler, Editar e Excluir jogos (CRUD)"
+    }
+    
+]

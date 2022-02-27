@@ -1,0 +1,153 @@
+header{
+    position: fixed;
+    top: 20px;
+    width: 100vw;
+    height: 60px;
+    padding: 0 50px;
+    color: #fff;
+    z-index: 9999;
+    pointer-events: none;
+
+    .logo{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    nav{
+        background-color: #1e1e1e;
+        transform: scale(0.3);
+        transform-origin: top right;
+        position: absolute;
+        right: 35px;
+        top: 2px;
+        width: 300px;
+        height: 400px;
+        box-shadow: -1px 1px 7px #00000052;
+        padding: 30px;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        opacity: 0;
+
+        ul{
+            list-style: none;
+            li{
+                margin-top: 15px;
+                a{
+                    position: relative;
+                    color: rgb(196, 196, 196);
+                    text-decoration: none;
+                    font-size: 20px;
+                    transition: all .2s linear;
+
+                    .icon{
+                        margin-right: 5px;
+                    }
+        
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: 0;
+                        background-color: #8257e6;
+                        width: 0px;
+                        height: 4px;
+                        transition: all .2s linear;
+                    }
+                    
+                    &:hover{
+                        color: #fff;
+        
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        #github-icon{
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            height: 50px;
+            width: 50px;
+            color: #444444;
+            transition: all .2s ease;
+
+            &:hover{
+                color: #fff;
+            }
+        }
+        
+
+        &.active{
+            pointer-events: all;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    button{
+        pointer-events: all;
+        z-index: 1001;
+        top: 50%;
+        transform: translateY(-50%);
+        float: right;
+        width: 30px;
+        position: relative;
+        height: 30px;
+        border: 0;
+        cursor: pointer;
+        background: none;
+        outline: none;
+
+        &.light{
+            &::before, &::after{
+                background-color: #fff;
+            }
+        }
+
+        &::before, &::after{
+            content: '';
+            height: 2px;
+            position: absolute;
+            -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+            background-color: #8257e6;
+        }
+
+        &::before{
+            top: 5px;
+            left: 0;
+            width: 100%;
+        }
+
+        &::after{
+            right: 0;
+            width: 72%;
+            top: 17px;
+        }
+
+        &.active{
+            &::after{
+                background-color: #8257e6;
+                top: 15px;
+                width: 100%;
+                transform: rotate(-45deg);
+            }
+
+            &::before{
+                background-color: #8257e6;
+                top: 15px;
+                width: 100%;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
