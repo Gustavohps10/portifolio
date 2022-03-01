@@ -85,9 +85,8 @@ export function Home(){
                 <h1>Sobre mim</h1>
                 <p>
                   Sou um desenvolvedor Web localizado em Maringá-PR. Solucionar problemas através das linhas de código é meu principal objetivo.
-                  <br /><br />
-                  Comecei na programação há 2 anos, desde então venho aprimorando meus conhecimentos consumindo cursos, videoaulas e aplicando o que aprendi em diversos projetos pessoais.
                 </p>
+                <p>Comecei na programação há 2 anos, desde então venho aprimorando meus conhecimentos consumindo cursos, videoaulas e aplicando o que aprendi em diversos projetos pessoais.</p>
               <a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank" className="especial-buttom">Meu Linkedin <FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
             </div>
           </section>
@@ -206,7 +205,7 @@ export function Home(){
             <div>
               <ul>
                 <li className="title">Contate-me</li>
-                <li> gustavoh.santos735@gmail.com</li>
+                <li className="my-email"> gustavoh.santos735@gmail.com</li>
                 <li>(44) 98462-8599</li>
               </ul>
               <ul>

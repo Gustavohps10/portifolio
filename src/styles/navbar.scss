@@ -14,6 +14,8 @@ header{
         transform: translateY(-50%);
         text-decoration: none;
         color: #fff;
+        width: 150px;
+        height: 60px;
     }
 
     nav{
@@ -148,6 +150,32 @@ header{
                 width: 100%;
                 transform: rotate(45deg);
             }
+        }
+    }
+}
+
+
+@media (max-width: 800px){
+    header{
+        top: 5px;
+        padding: 0 25px;
+
+        nav{
+            right: 15px;
+        }
+
+        button{
+            &::before, &::after{
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px){
+    header{
+        .logo{
+            width: 120px;
         }
     }
 }
