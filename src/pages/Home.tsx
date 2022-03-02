@@ -1,3 +1,5 @@
+import {Helmet, HelmetProvider} from "react-helmet-async";
+
 import { Navbar } from "../components/Navbar";
 
 import '../styles/home.scss'
@@ -53,7 +55,13 @@ export function Home(){
     }
 
     return(
-    <>
+      <>
+        <HelmetProvider>
+          <Helmet>
+              <title>Gustavo Henrique</title>
+          </Helmet>
+        </HelmetProvider>
+      
         <Navbar isLight={menuBtnIsLight}/>
 
         <div
@@ -224,6 +232,6 @@ export function Home(){
             <span>© Made with ❤️ Gustavo Henrique 2022</span>
           </section>
         </div>
-    </> 
+      </> 
     )
 }
