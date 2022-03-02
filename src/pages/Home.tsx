@@ -17,7 +17,6 @@ export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
     const [refVisible, setRefVisible] = useState(false);
-    const [carouselControlActive, setCarouselControlActive] = useState(false);
 
     useEffect(() => {
       if (!refVisible) { 
@@ -44,6 +43,15 @@ export function Home(){
   
       return visible;
     }
+
+    function handleScroll(deltaY: number){
+      if(window.screen.width > 1024){
+        deltaY > 0 
+        ? sectionsContainer.current?.scrollBy(0, 200)
+        : sectionsContainer.current?.scrollBy(0, -200);
+      }
+    }
+
     return(
     <>
         <Navbar isLight={menuBtnIsLight}/>
@@ -51,13 +59,7 @@ export function Home(){
         <div
           ref={el => { sectionsContainer.current = el; setRefVisible(!!el); }}
           className="sections"
-          onWheel= {(e) => {
-            if(e.deltaY > 0){
-              sectionsContainer.current?.scrollBy(0, 200)
-            }else{
-              sectionsContainer.current?.scrollBy(0, -200)
-            }
-          }}
+          onWheel= {(e) => {handleScroll(e.deltaY)}}
           onScroll={() => {  
             setMenuBtnIsLight(checkIfSectionIsVisible(sectionsBtnLight));
           }}
