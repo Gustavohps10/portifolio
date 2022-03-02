@@ -16,7 +16,8 @@ import Projects from '../data/projects.json'
 export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
-    const [refVisible, setRefVisible] = useState(false)
+    const [refVisible, setRefVisible] = useState(false);
+    const [carouselControlActive, setCarouselControlActive] = useState(false);
 
     useEffect(() => {
       if (!refVisible) { 
@@ -150,8 +151,8 @@ export function Home(){
           </section>
 
           <section id="portifolio">
+            <div>
               <h1>Portifolio</h1>
-
               <div className="box-container">
                 {
                   Projects.map(project =>{
@@ -162,7 +163,7 @@ export function Home(){
                       <div className="content">
                         <span>{project.name}</span>
                         <p className="description">
-                         {project.description}
+                        {project.description}
                         </p>
                       </div>
                       <div className="icons">
@@ -174,8 +175,9 @@ export function Home(){
                     </div>
                   );
                 })}
-               
-              </div>            
+              </div>
+            </div>
+                         
           </section>
 
           <section id="contact">
