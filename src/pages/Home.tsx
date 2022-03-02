@@ -15,6 +15,8 @@ import {useEffect, useRef, useState} from "react";
 
 import Projects from '../data/projects.json'
 
+import scrollreveal from 'scrollreveal'
+
 export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
@@ -26,6 +28,28 @@ export function Home(){
       }
     }, [refVisible])
 
+    useEffect(()=>{
+      const sr = scrollreveal({
+        origin: "top",
+        distance: "80px",
+        duration: 2000,
+        reset: true
+      });
+
+      sr.reveal(
+        `
+        #home aside div, #home img,
+        #about img,
+        #skills img,
+        #portifolio .box
+        `,
+        {
+          container: ".sections",
+          opacity: 0,
+          interval: 300
+        }
+      )
+  },[]);
 
     const sectionsBtnLight = [
       sectionsContainer.current?.children[5],
