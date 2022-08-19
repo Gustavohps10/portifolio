@@ -43,6 +43,13 @@
         "image": "https://user-images.githubusercontent.com/61752235/151655747-2a9cde40-ba66-4736-af03-60643eac0fe8.PNG",
         "github": "https://github.com/Gustavohps10/CRUD-Django",
         "description": "Sistema simples onde você pode Cadastrar, Ler, Editar e Excluir jogos (CRUD)"
+    },
+    {
+        "id": "7",
+        "name": "Guidenite",
+        "image": "https://github.com/Gustavohps10/guidenite/raw/main/src/assets/images/example.gif",
+        "github": "https://github.com/Gustavohps10/guidenite",
+        "description": "Um menu com diversas funcionaliadades e layout semelhante ao do Xbox"
     }
     
 ]

@@ -206,14 +206,8 @@ export function Home(){
                       <div className="content">
                         <span>{project.name}</span>
                         <p className="description">
-                        {project.description}
+                          {project.description}
                         </p>
-                      </div>
-                      <div className="icons">
-                          <a href={project.github} target="_blank"><FontAwesomeIcon className="icon" icon={faGithub} /></a>
-                          
-                          {project.website ? (<a href={project.website} target="_blank"><FontAwesomeIcon className="icon" icon={faPager} /></a>) :null}
-                          
                       </div>
                     </div>
                   );
