@@ -28,6 +28,7 @@ interface ProjectType {
   github: string
   website?: string 
   description: string
+  longDescription: string
   shields: Array<string>
 }
 
@@ -119,7 +120,7 @@ export function Home(){
             {selectedProject?.logo && 
               <img src={selectedProject.logo} />
             }
-            <p className="description">{selectedProject?.description}</p>
+            <p className="description">{selectedProject?.longDescription}</p>
 
             <div className="shields-containter">
               {selectedProject?.shields.map((shield)=>{

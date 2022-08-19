@@ -5,11 +5,13 @@
         "image": "https://github.com/Gustavohps10/guidenite/raw/main/src/assets/images/example.gif",
         "github": "https://github.com/Gustavohps10/guidenite",
         "description": "Um menu com diversas funcionaliadades e layout semelhante ao do Xbox",
+        "longDescription": "Guidenite é basicamente um menu que aparece em cima de outros aplicativos. Decidi tornar a interface do meu computador o mais semelhante possível a uma interface de videogame, então tive a ideia de criar meu próprio menu onde posso controlá-lo com um gamepad.",
         "shields": [
-            "https://img.shields.io/badge/Electron-2B2E3A?style=for-the-badge&logo=electron&logoColor=9FEAF9",
+            "https://img.shields.io/badge/Electron-20232A?style=for-the-badge&logo=electron&logoColor=9FEAF9",
             "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
-            "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white",
-            "https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"
+            "https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=339933",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699"
         ]
     },
     {
@@ -19,10 +21,13 @@
         "github": "https://github.com/Gustavohps10/overclock-eshop",
         "website": "http://overclockeshop.ga/",
         "description": "Um sistema com as principais funcionalidades de um e-commerce",
+        "longDescription": "Overclock E-shop é um sistema web voltado para a venda de eletrônicos de informática. Foi desenvolvido pensando em ter as principais funcionalidades de um e-commerce. Neste projeto, o usuário tem um fluxo semelhante ao de uma loja virtual real, podendo pesquisar produtos, adicionar ao carrinho, controlar o carrinho e ainda concluir o pedido escolhendo o endereço.",
         "shields": [
-            "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white",
-            "https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white",
-            "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+            "https://img.shields.io/badge/PHP-20232A?style=for-the-badge&logo=php&logoColor=777BB4",
+            "https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=005C84",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6",
+            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
         ]
     },
     {
@@ -31,12 +36,14 @@
         "image": "https://user-images.githubusercontent.com/61752235/153693098-5d065a9b-5392-441f-9fbb-d3bf4e869d9c.gif",
         "github": "https://github.com/Gustavohps10/speaker",
         "description": "Plataforma de publicação de áudio online. Ouça suas músicas e podcasts favoritos",
+        "longDescription": "Speaker é uma plataforma de publicação de áudio online construída com o framework Laravel. Lá você pode pesquisar, fazer upload e ouvir suas faixas favoritas.",
         "shields": [
-            "https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white",
-            "https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white",
-            "https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white",
-            "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white",
-            "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+            "https://img.shields.io/badge/Laravel-20232A?style=for-the-badge&logo=laravel&logoColor=FF2D20",
+            "https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=005C84",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
+            "https://img.shields.io/badge/Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699",
+            "https://img.shields.io/badge/Bootstrap-20232A?style=for-the-badge&logo=bootstrap&logoColor=563D7C"
         ]
     },
     {
@@ -45,10 +52,14 @@
         "image": "https://github.com/Gustavohps10/tcc-senai/raw/main/Projeto/images/demo-reserva.gif",
         "github": "https://github.com/Gustavohps10/tcc-senai",
         "description": "Sistema que ajuda no gerenciamento de veículos de um estacionamento",
+        "longDescription": "Trata-se de um sistema para gerenciar a entrada e saída de veículos disponíveis em uma empresa, onde os usuários podem reservar um horário para usar os carros empresariais.",
         "shields": [
-            "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white",
-            "https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white",
-            "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+            "https://img.shields.io/badge/PHP-20232A?style=for-the-badge&logo=php&logoColor=777BB4",
+            "https://img.shields.io/badge/MySQL-20232A?style=for-the-badge&logo=mysql&logoColor=005C84",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6",
+            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
+            "https://img.shields.io/badge/MaterializeCss-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAACQUlEQVQ4je2TS0hUYRTHf993Z7wzOTmO4gPsgUa20IIKQlwUuWnVJmho07YW0kMQCtzcXdFSgpaCS+m1CSIScVFR1ggiuOkF4shozquZuTPeO/e08M5gErmopf/V+f6H8//+5xwO7OFfof5Ebtywmgy3bABEO0JFZVmbAMsjI+H9ZTMEEO0/6Kjh4cLOWr2TSN0aPeEZdtoxJS1tTbN2z/EZALEsHZKGRceUtBtSq6VIx1JhYqpzV0FDG5cBAyDQ0ZkGBu3JqUNraXsA6AEIxFoWlFIHlBG4uKsgMFRPNkbaARB91tByrs43x4oAChnaWfyboFhWQISTAErrotJGLwBKDaLU6XoXkUjUD8/8VXAtb/cBYQAVNJdqrQucQqgJeioQbPTj7szEs+btGoHS5NNLCrkAUFlZyTiplS23TuWdgqMCUXGdwwK1BXwFPgK9gCL5/er67Tt9IEoLj3U45L7ykCsC13RDcKD2k+dJQlDzANV8fnmbiQRKPtQezkbqJnAd1PmW2L5preLxghL9AsDNZVrr8xQ3IfAGoJrNFWu8gk8gcwBU3Yzy5Iifeq0sy9uaofbeI1Ks/swf85Pr7bHIohaZBnAL2doSQPRs2JR5oOJk05/xj0Ngqb4UjfeyatsJRIK+vSfKsrxQLvxWNisLuG6/L/elNWbOqXjcBp67qVXX592AZ8zAttP7MTbWVS1VTYBSNJTstqwyQPbuvVilkosBmGUyzY/uZwBkfNxc+5bsAtCOV257+CDJHv4LfgGxF+RxMNdfpgAAAABJRU5ErkJggg=="
         ]
     },
     {
@@ -58,8 +69,10 @@
         "github": "https://github.com/Gustavohps10/jogos/tree/main/mario_game",
         "website": "https://flappymario.vercel.app/",
         "description": "Game inspirado no Flappy Bird com tema de Super Mario World",
+        "longDescription": "Este é um projeto bem simples. Tive a idéia de fazer um jogo com Javascript Puro, então criei meu próprio Flappy Bird com sprites do Super Mario World de SNES.",
         "shields": [
-            "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
+            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
+            "https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white"
         ]
     },
     {
@@ -67,25 +80,32 @@
         "name": "Letmeask",
         "image": "https://user-images.githubusercontent.com/61752235/155585407-c1438cfe-8bfd-4a3e-a272-e1e697bb6ce7.PNG",
         "github": "https://github.com/Gustavohps10/letmeask",
-        "description": "Responda sua audiencia em tempo real",
+        "description": "Responda sua audiência em tempo real",
+        "longDescription": "Projeto realizado junto com a Rocketseat durante a NLW #6. O Letmeask é uma plataforma que tem a proposta de resolver problemas de acumulo de perguntas durante uma transmissão ao vivo, nela você pode responder a sua audiência em tempo real.",
         "shields": [
-            "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+            "https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=007ACC",
             "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
-            "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white",
-            "https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"
+            "https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=339933",
+            "https://img.shields.io/badge/firebase-20232A?style=for-the-badge&logo=firebase&logoColor=ffca28",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699"
             
         ]
     },
     {
         "id": 7,
-        "name": "Games CRUD - Django",
+        "name": "Game Gallery - Django",
         "image": "https://user-images.githubusercontent.com/61752235/151655747-2a9cde40-ba66-4736-af03-60643eac0fe8.PNG",
         "github": "https://github.com/Gustavohps10/CRUD-Django",
         "description": "Sistema simples onde você pode Cadastrar, Ler, Editar e Excluir jogos (CRUD)",
+        "longDescription": "Uma galeria de jogos. Este projeto é um pequeno sistema web desenvolvido utilizando o Framework Django que é baseado em Python, nele você pode Cadastrar, Ler, Editar e Excluir jogos, além de poder tabém Pesquisar por algum jogo cadastrado pelo nome",
         "shields": [
-            "https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue",
-            "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green",
-            "https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"
+            "https://img.shields.io/badge/Python-20232A?style=for-the-badge&logo=python&logoColor=FFD43B",
+            "https://img.shields.io/badge/Django-20232A?style=for-the-badge&logo=django&logoColor=green",
+            "https://img.shields.io/badge/SQLite-20232A?style=for-the-badge&logo=sqlite&logoColor=07405E",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6",
+            "https://img.shields.io/badge/MaterializeCss-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAACQUlEQVQ4je2TS0hUYRTHf993Z7wzOTmO4gPsgUa20IIKQlwUuWnVJmho07YW0kMQCtzcXdFSgpaCS+m1CSIScVFR1ggiuOkF4shozquZuTPeO/e08M5gErmopf/V+f6H8//+5xwO7OFfof5Ebtywmgy3bABEO0JFZVmbAMsjI+H9ZTMEEO0/6Kjh4cLOWr2TSN0aPeEZdtoxJS1tTbN2z/EZALEsHZKGRceUtBtSq6VIx1JhYqpzV0FDG5cBAyDQ0ZkGBu3JqUNraXsA6AEIxFoWlFIHlBG4uKsgMFRPNkbaARB91tByrs43x4oAChnaWfyboFhWQISTAErrotJGLwBKDaLU6XoXkUjUD8/8VXAtb/cBYQAVNJdqrQucQqgJeioQbPTj7szEs+btGoHS5NNLCrkAUFlZyTiplS23TuWdgqMCUXGdwwK1BXwFPgK9gCL5/er67Tt9IEoLj3U45L7ykCsC13RDcKD2k+dJQlDzANV8fnmbiQRKPtQezkbqJnAd1PmW2L5preLxghL9AsDNZVrr8xQ3IfAGoJrNFWu8gk8gcwBU3Yzy5Iifeq0sy9uaofbeI1Ks/swf85Pr7bHIohaZBnAL2doSQPRs2JR5oOJk05/xj0Ngqb4UjfeyatsJRIK+vSfKsrxQLvxWNisLuG6/L/elNWbOqXjcBp67qVXX592AZ8zAttP7MTbWVS1VTYBSNJTstqwyQPbuvVilkosBmGUyzY/uZwBkfNxc+5bsAtCOV257+CDJHv4LfgGxF+RxMNdfpgAAAABJRU5ErkJggg=="
         ]
     }
 ]
