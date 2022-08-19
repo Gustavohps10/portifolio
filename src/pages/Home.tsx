@@ -16,6 +16,7 @@ import {useEffect, useRef, useState} from "react";
 import Projects from '../data/projects.json'
 
 import scrollreveal from 'scrollreveal'
+import Typewriter from "typewriter-effect"
 
 export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
@@ -99,12 +100,21 @@ export function Home(){
 
           <section id="home">
               <aside>
-                  <div>
-                      <h1>Oi, eu sou 
-                      <br/>Gustavo Henrique</h1>
-                      <p>
-                        Desenvolvedor Web e entusiasta de tecnologia
-                      </p>
+                  <div className="introduction">
+                      <h1>Oi, eu sou </h1>     
+                      <h2>Gustavo Henrique</h2>     
+                        <Typewriter
+                          options={{
+                            loop: true,
+                          }}
+                          onInit={(typewriter) => {
+                            typewriter
+                              .typeString('Desenvolvedor Web e entusiasta de tecnologia!')
+                              .pauseFor(2500)
+                              .deleteAll()
+                              .start();
+                          }}
+                        />
                   </div>
               </aside>
               <div>
