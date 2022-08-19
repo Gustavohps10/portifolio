@@ -8,8 +8,8 @@ import aboutImg from '../assets/images/about.svg'
 import skillsImg from '../assets/images/skills.svg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faDiscord, faGithub, faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython} from '@fortawesome/free-brands-svg-icons'
-import {faPager} from '@fortawesome/free-solid-svg-icons'
+import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython} from '@fortawesome/free-brands-svg-icons'
+import {faWindowMaximize,faXmark} from '@fortawesome/free-solid-svg-icons'
 
 import {useEffect, useRef, useState} from "react";
 
@@ -17,12 +17,27 @@ import Projects from '../data/projects.json'
 
 import scrollreveal from 'scrollreveal'
 import Typewriter from "typewriter-effect"
+import Modal from "../components/Modal";
+
+
+interface ProjectType {
+  id: number,
+  name: string
+  logo?: string
+  image: string
+  github: string
+  website?: string 
+  description: string
+  shields: Array<string>
+}
 
 export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
     const [refVisible, setRefVisible] = useState(false);
-
+    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null)
+    const [modalVisible, setModalVisible] = useState(false)
+  
     useEffect(() => {
       if (!refVisible) { 
         return
@@ -49,7 +64,7 @@ export function Home(){
           interval: 300
         }
       )
-  },[]);
+    },[]);
 
     const sectionsBtnLight = [
       sectionsContainer.current?.children[5],
@@ -78,6 +93,12 @@ export function Home(){
       }
     }
 
+    function handleModalClick(target: Element) {
+        if(target.classList.contains("modal-box")){
+          setModalVisible(false)
+        }
+    }
+
     return(
       <>
         <HelmetProvider>
@@ -87,6 +108,46 @@ export function Home(){
         </HelmetProvider>
       
         <Navbar isLight={menuBtnIsLight}/>
+
+        <Modal onClick={(e) => handleModalClick(e.target as Element)} visible={modalVisible}>
+          <div>
+            <button className="close" onClick={()=>setModalVisible(false)}><FontAwesomeIcon className="icon" icon={faXmark} /></button>
+            
+            <img className="main-image" src={selectedProject?.image} alt={selectedProject?.name} />
+            
+            <h1>{selectedProject?.name}</h1>
+            {selectedProject?.logo && 
+              <img src={selectedProject.logo} />
+            }
+            <p className="description">{selectedProject?.description}</p>
+
+            <div className="shields-containter">
+              {selectedProject?.shields.map((shield)=>{
+                return(
+                  <img key={shield} src={shield}/>
+                )
+              })}
+            </div>
+
+            <hr />
+
+            <footer>
+              <a href={selectedProject?.github} target="_blank" className="special-button">
+                <FontAwesomeIcon className="icon" icon={faGithub} />
+                Código fonte
+              </a>
+
+              {selectedProject?.website &&
+                <a href={selectedProject.website} target="_blank" className="special-button">
+                <FontAwesomeIcon className="icon" icon={faWindowMaximize} />
+                  Website
+                </a>
+              }
+              
+            </footer>
+           
+          </div>
+        </Modal>
 
         <div
           ref={el => { sectionsContainer.current = el; setRefVisible(!!el); }}
@@ -131,7 +192,7 @@ export function Home(){
                   Sou um desenvolvedor Web localizado em Maringá-PR. Solucionar problemas através das linhas de código é meu principal objetivo.
                 </p>
                 <p>Comecei na programação há 2 anos, desde então venho aprimorando meus conhecimentos consumindo cursos, videoaulas e aplicando o que aprendi em diversos projetos pessoais.</p>
-              <a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank" className="especial-buttom">Meu Linkedin <FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
+              <a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank" className="special-button">Meu Linkedin <FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
             </div>
           </section>
 
@@ -188,7 +249,7 @@ export function Home(){
                   <FontAwesomeIcon className="tech" icon={faGithub} />
                 </div>
 
-                <a href="https://github.com/gustavohps10" target="_blank" className="especial-buttom">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></a>
+                <a href="https://github.com/gustavohps10" target="_blank" className="special-button">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></a>
             </div>
             <img src={skillsImg} alt="Skills" />
           </section>
@@ -200,7 +261,7 @@ export function Home(){
                 {
                   Projects.map(project =>{
                   return(
-                    <div className="box" key={project.id}>
+                    <div className="box" key={project.id} onClick={()=>{setSelectedProject(project); setModalVisible(true)}}>
                       <img src={project.image} />
                     
                       <div className="content">
@@ -234,7 +295,7 @@ export function Home(){
                 <textarea placeholder="Digite uma mensagem" name="message"></textarea>
                 <br />
 
-                <button className="especial-buttom" type="submit">Enviar</button>
+                <button className="special-button" type="submit">Enviar</button>
               </form>
             </div>
 

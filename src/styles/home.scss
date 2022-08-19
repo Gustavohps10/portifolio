@@ -4,7 +4,7 @@ body {
   overflow: hidden;
 }
 
-.especial-buttom{
+.special-button{
     position: relative;
     transition: all .2s linear;
     color: #fff;
@@ -18,6 +18,7 @@ body {
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
+    border-radius: 5px;
 
     .icon{
         margin: 0 8px;
@@ -26,16 +27,6 @@ body {
 
     &:hover{
         background-color: #fff;
-    }
-
-    &::after{
-        bottom: -4px;
-        left: -4px;
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        border: 1px solid #fff;
     }
 }
 
@@ -129,7 +120,7 @@ section#about{
         width: 400px;
     }
 
-    .especial-buttom:hover{
+    .special-button:hover{
         color: #121214;
     }
 }
@@ -171,7 +162,7 @@ section#skills{
         }
     }
 
-    .especial-buttom:hover{
+    .special-button:hover{
         color: #6421ff;
     }
 }
@@ -201,6 +192,7 @@ section#portifolio{
             background-color: #1e1e1e;
             box-shadow: -1px 1px 7px #00000052;
             transition: all .2s linear;
+            cursor: pointer;
 
             img{
                 width: 100%;
@@ -294,9 +286,8 @@ section#contact{
        
     }
 
-    .especial-buttom{
+    .special-button{
         border-color: #8257e6;
-
         font-size: 20px;
         margin: 0 auto;
         width: 300px;
@@ -352,6 +343,89 @@ section#social{
         text-align: center;
         font-size: 20px;
         color: #fff;
+    }
+}
+
+.modal{
+    .close{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1e1e;
+        color: #fff;
+        border: none;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: all .2s linear;
+        position: relative;
+        float: right;
+        cursor: pointer;
+
+        .icon{
+            font-size: 20px;
+        }
+
+        &:hover{
+            border-color: #717171;
+        }
+    }
+
+    .main-image{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 20px;
+        color: #717171;
+    }
+
+    .shields-containter{
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        img{
+            height: 24px;
+        }
+    }
+
+    hr{
+        border: 0;
+        height: 1px;
+        background: #272727;
+        margin: 15px 0;
+    }
+
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .special-button{
+            margin-top: 0;
+            padding: 5px 15px;
+            line-height: 16px;
+            background-color: #8257e6;
+            border-color: #8257e6;
+
+            .icon{
+                height: 20px;
+            }
+
+            &:hover{
+                background-color: #5c3ea3;
+                border-color:  #5c3ea3;;        
+            }
+        }
     }
 }
 
@@ -439,7 +513,7 @@ section#social{
                 font-size: 40px;
             }
 
-            .especial-buttom{
+            .special-button{
                 
                 right: 0;
                 margin: 0 auto;
@@ -453,7 +527,7 @@ section#social{
             display: none;
         }
 
-        .especial-buttom{      
+        .special-button{      
             right: 0;
             margin: 0 auto;
         }
