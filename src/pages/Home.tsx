@@ -112,8 +112,6 @@ export function Home(){
 
         <Modal onClick={(e) => handleModalClick(e.target as Element)} visible={modalVisible}>
           <div>
-            <button className="close" onClick={()=>setModalVisible(false)}><FontAwesomeIcon className="icon" icon={faXmark} /></button>
-            
             <img className="main-image" src={selectedProject?.image} alt={selectedProject?.name} />
             
             <h1>{selectedProject?.name}</h1>
