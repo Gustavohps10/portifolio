@@ -24,6 +24,7 @@
     "react-helmet-async": "^1.2.3",
     "react-router-dom": "6",
     "react-scripts": "5.0.0",
+    "react-toastify": "^9.0.8",
     "sass": "^1.49.8",
     "scrollreveal": "^4.0.9",
     "scss": "^0.2.4",

@@ -1,3 +1,7 @@
+:root{
+    --toastify-color-success: #8c6adb !important;
+}
+
 header{
     position: fixed;
     top: 20px;
@@ -25,8 +29,8 @@ header{
         position: absolute;
         right: 35px;
         top: 2px;
-        width: 300px;
-        height: 400px;
+        width: 305px;
+        min-height: 400px;
         box-shadow: -1px 1px 7px #00000052;
         padding: 30px;
         z-index: 1000;
@@ -152,6 +156,50 @@ header{
             }
         }
     }
+
+    hr{
+        border: none;
+        height: 1px;
+        background: #717171;
+        margin: 25px 0;
+    }
+
+    .tags{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .tag{
+            display: flex;
+            cursor: pointer;
+
+            .icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #8257e6;
+                width: 25px;
+                height: 25px;
+
+                > svg{
+                    width: 15px;
+                }
+            }
+
+            span{
+                background-color: #20232A;
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                padding: 0 5px;
+                height: 100%;
+            }
+        }
+    }
 }
 
 
@@ -162,7 +210,7 @@ header{
         background-color: #121214;
 
         nav{
-            width: 250px;
+            width: 265px;
             top: 0px;
             right: 0px;
             height: 100vh;
@@ -177,6 +225,35 @@ header{
         button{
             &::before, &::after{
                 background-color: #fff;
+            }
+        }
+
+        .tags{
+            a{
+                display: contents;
+            }
+
+            .tag{
+                padding: 5px;
+
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                    > svg{
+                        width: 25px;
+                    }
+                }
+                width: 100%;
+                span{
+                    background-color: transparent;
+                    font-size: 15px;
+                }
+
+                &:hover{
+                    
+                    background-color: #20232A;
+                    
+                }
             }
         }
     }
