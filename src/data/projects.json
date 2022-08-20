@@ -64,15 +64,19 @@
     },
     {
         "id": 5,
-        "name": "Flappy Mario",
-        "image": "https://user-images.githubusercontent.com/61752235/155443117-d751c1bf-7fab-47b2-96c9-33da380ee201.PNG",
-        "github": "https://github.com/Gustavohps10/jogos/tree/main/mario_game",
-        "website": "https://flappymario.vercel.app/",
-        "description": "Game inspirado no Flappy Bird com tema de Super Mario World",
-        "longDescription": "Este é um projeto bem simples. Tive a idéia de fazer um jogo com Javascript Puro, então criei meu próprio Flappy Bird com sprites do Super Mario World de SNES.",
+        "name": "Meu Portifolio",
+        "image": "https://user-images.githubusercontent.com/61752235/156041545-cf386e3b-627d-4d10-bfc6-1ba5452e6bfc.PNG",
+        "github": "https://github.com/Gustavohps10/portifolio",
+        "website": "https://gustavohenrique.ga/",
+        "description": "Feito com o propósito de me apresentar e mostrar alguns dos projetos que ja desenvolvi.",
+        "longDescription": "",
         "shields": [
-            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
-            "https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white"
+            "https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white",
+            "https://img.shields.io/badge/TypeScript-20232A?style=for-the-badge&logo=typescript&logoColor=007ACC",
+            "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+            "https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=339933",
+            "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+            "https://img.shields.io/badge/Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699"
         ]
     },
     {
@@ -106,6 +110,19 @@
             "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
             "https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6",
             "https://img.shields.io/badge/MaterializeCss-20232A?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAACQUlEQVQ4je2TS0hUYRTHf993Z7wzOTmO4gPsgUa20IIKQlwUuWnVJmho07YW0kMQCtzcXdFSgpaCS+m1CSIScVFR1ggiuOkF4shozquZuTPeO/e08M5gErmopf/V+f6H8//+5xwO7OFfof5Ebtywmgy3bABEO0JFZVmbAMsjI+H9ZTMEEO0/6Kjh4cLOWr2TSN0aPeEZdtoxJS1tTbN2z/EZALEsHZKGRceUtBtSq6VIx1JhYqpzV0FDG5cBAyDQ0ZkGBu3JqUNraXsA6AEIxFoWlFIHlBG4uKsgMFRPNkbaARB91tByrs43x4oAChnaWfyboFhWQISTAErrotJGLwBKDaLU6XoXkUjUD8/8VXAtb/cBYQAVNJdqrQucQqgJeioQbPTj7szEs+btGoHS5NNLCrkAUFlZyTiplS23TuWdgqMCUXGdwwK1BXwFPgK9gCL5/er67Tt9IEoLj3U45L7ykCsC13RDcKD2k+dJQlDzANV8fnmbiQRKPtQezkbqJnAd1PmW2L5preLxghL9AsDNZVrr8xQ3IfAGoJrNFWu8gk8gcwBU3Yzy5Iifeq0sy9uaofbeI1Ks/swf85Pr7bHIohaZBnAL2doSQPRs2JR5oOJk05/xj0Ngqb4UjfeyatsJRIK+vSfKsrxQLvxWNisLuG6/L/elNWbOqXjcBp67qVXX592AZ8zAttP7MTbWVS1VTYBSNJTstqwyQPbuvVilkosBmGUyzY/uZwBkfNxc+5bsAtCOV257+CDJHv4LfgGxF+RxMNdfpgAAAABJRU5ErkJggg=="
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Flappy Mario",
+        "image": "https://user-images.githubusercontent.com/61752235/155443117-d751c1bf-7fab-47b2-96c9-33da380ee201.PNG",
+        "github": "https://github.com/Gustavohps10/jogos/tree/main/mario_game",
+        "website": "https://flappymario.vercel.app/",
+        "description": "Game inspirado no Flappy Bird com tema de Super Mario World",
+        "longDescription": "Este é um projeto bem simples. Tive a idéia de fazer um jogo com Javascript Puro, então criei meu próprio Flappy Bird com sprites do Super Mario World de SNES.",
+        "shields": [
+            "https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
+            "https://img.shields.io/badge/Vercel-20232A?style=for-the-badge&logo=vercel&logoColor=white"
         ]
     }
 ]
