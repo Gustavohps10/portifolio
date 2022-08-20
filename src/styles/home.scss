@@ -14,6 +14,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     margin-top: 10px;
     text-decoration: none;
     background-color: transparent;
@@ -21,8 +22,7 @@ body {
     border-radius: 5px;
 
     .icon{
-        margin: 0 8px;
-        height: 30px;
+        height: 28px;
     }
 
     &:hover{
@@ -167,84 +167,6 @@ section#skills{
     }
 }
 
-section#portifolio{
-    position: relative;
-    padding: 5px 12px;
-    background-color: #121214;
-    color: #fff;
-
-    h1{
-        text-align: center;
-        font-size: 50px;
-        color: #d1d1d1;
-    }
-
-    .box-container{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-content: center;
-        gap: 20px;
-        padding: 0 12px;
-
-        .box{
-            overflow: hidden;
-            position: relative;
-            background-color: #1e1e1e;
-            box-shadow: -1px 1px 7px #00000052;
-            transition: all .2s linear;
-            cursor: pointer;
-
-            img{
-                width: 100%;
-                height: 150px;
-                object-fit: cover;
-                transition: all .2s linear;
-            }
-
-            .content{
-                margin-top: -7px;
-                padding: 8px;
-
-                span{
-                    font-weight: 600;
-                    font-size: 18px;
-                    display: block;
-                    margin-bottom: 3px;
-                }
-
-                .description{
-                    font-size: 13px;
-                    color: #b6b6b6;
-                    margin: 5px 0;
-                }  
-            }
-
-            &:hover{
-                transform: translateY(-10px);
-                img{
-                    filter: brightness(0.6);
-                }
-            } 
-        }
-
-        &::-webkit-scrollbar {
-            width: 15px;
-            height: 15px;
-            background-color: rgb(0, 0, 0, 28%);
-            border-radius: 10px;
-        
-        }
-          
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background-color: rgba(100, 100, 100, 0.49);
-            background-color: #4e4e4ecf;
-            border: 3px solid transparent;
-            background-clip: content-box;
-        }
-    }
-}
-
 section#contact{
     padding: 50px 50px;
     background-color: #121214;
@@ -346,80 +268,9 @@ section#social{
     }
 }
 
-.modal{
-    .main-image{
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    h1{
-        font-size: 22px;
-    }
-
-    p{
-        font-size: 16px;
-        line-height: 20px;
-        color: #717171;
-    }
-
-    .shields-containter{
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-
-        img{
-            height: 24px;
-        }
-    }
-
-    hr{
-        border: 0;
-        height: 1px;
-        background: #272727;
-        margin: 15px 0;
-    }
-
-
-    footer{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        .special-button{
-            margin-top: 0;
-            padding: 5px 15px;
-            line-height: 16px;
-            background-color: #8257e6;
-            border-color: #8257e6;
-
-            .icon{
-                height: 20px;
-            }
-
-            &:hover{
-                background-color: #5c3ea3;
-                border-color:  #5c3ea3;;        
-            }
-        }
-    }
-}
-
-
 @media (max-width: 1024px){
     .sections{
         overflow-y: auto;
-    }
-}
-
-@media (max-width: 1000px ) and (min-width: 801px){
-    section#portifolio{
-        .box-container{
-            grid-template-columns: repeat(auto-fit, minmax(239px, 1fr));
-
-            .box img{
-                height: 120px;
-            }
-        }
     }
 }
 
@@ -508,10 +359,6 @@ section#social{
         }
     }
 
-    section#portifolio{
-        padding: 20px 12px;
-    }
-
     section#contact{
         h1{
             font-size: 40px;
@@ -545,15 +392,6 @@ section#social{
         }
     }
 
-    section#portifolio{
-        .box-container{
-            .box{
-                > img{
-                    height: 250px;
-                }
-            }
-        }
-    }
 
     section#social{
         div ul{
@@ -606,16 +444,6 @@ section#social{
         }
     }
 
-    section#portifolio{
-        .box-container{
-            .box{
-                > img{
-                    height: 220px;
-                }
-            }
-        }
-    }
-
     section#contact{
         h1{
             font-size: 28px;
@@ -664,14 +492,4 @@ section#social{
         }
     }
 
-    section#portifolio{
-        .box-container{
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            .box{
-                > img{
-                    height: 160px;
-                }
-            }
-        }
-    }
 }

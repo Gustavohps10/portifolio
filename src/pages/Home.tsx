@@ -8,37 +8,25 @@ import aboutImg from '../assets/images/about.svg'
 import skillsImg from '../assets/images/skills.svg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython} from '@fortawesome/free-brands-svg-icons'
-import {faWindowMaximize,faXmark} from '@fortawesome/free-solid-svg-icons'
+import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython, faRProject} from '@fortawesome/free-brands-svg-icons'
+import {faAddressBook, faDiagramProject, faHashtag, faHome, faProjectDiagram, faScrewdriverWrench, faUser, faWindowMaximize} from '@fortawesome/free-solid-svg-icons'
 
 import {useEffect, useRef, useState} from "react";
 
-import Projects from '../data/projects.json'
-
 import scrollreveal from 'scrollreveal'
 import Typewriter from "typewriter-effect"
-import Modal from "../components/Modal";
-
-
-interface ProjectType {
-  id: number,
-  name: string
-  logo?: string
-  image: string
-  github: string
-  website?: string 
-  description: string
-  longDescription: string
-  shields: Array<string>
-}
+import { Link } from "react-router-dom";
 
 export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
     const [refVisible, setRefVisible] = useState(false);
-    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null)
-    const [modalVisible, setModalVisible] = useState(false)
-  
+    const sectionsBtnLight = [
+      sectionsContainer.current?.children[4],
+      sectionsContainer.current?.children[2]
+    ];
+
+    
     useEffect(() => {
       if (!refVisible) { 
         return
@@ -67,12 +55,7 @@ export function Home(){
       )
     },[]);
 
-    const sectionsBtnLight = [
-      sectionsContainer.current?.children[5],
-      sectionsContainer.current?.children[2]
-    ];
-
-    function checkIfSectionIsVisible(sections: Array<Element | undefined>) {
+    function sectionIsVisible(sections: Array<Element | undefined>) {
       let visible = false;
 
       if(sections.length > 0){
@@ -94,12 +77,6 @@ export function Home(){
       }
     }
 
-    function handleModalClick(target: Element) {
-        if(target.classList.contains("modal-box")){
-          setModalVisible(false)
-        }
-    }
-
     return(
       <>
         <HelmetProvider>
@@ -108,52 +85,23 @@ export function Home(){
           </Helmet>
         </HelmetProvider>
       
-        <Navbar isLight={menuBtnIsLight}/>
-
-        <Modal onClick={(e) => handleModalClick(e.target as Element)} visible={modalVisible}>
-          <div>
-            <img className="main-image" src={selectedProject?.image} alt={selectedProject?.name} />
-            
-            <h1>{selectedProject?.name}</h1>
-            {selectedProject?.logo && 
-              <img src={selectedProject.logo} />
-            }
-            <p className="description">{selectedProject?.longDescription}</p>
-
-            <div className="shields-containter">
-              {selectedProject?.shields.map((shield)=>{
-                return(
-                  <img key={shield} src={shield}/>
-                )
-              })}
-            </div>
-
-            <hr />
-
-            <footer>
-              <a href={selectedProject?.github} target="_blank" className="special-button">
-                <FontAwesomeIcon className="icon" icon={faGithub} />
-                Código fonte
-              </a>
-
-              {selectedProject?.website &&
-                <a href={selectedProject.website} target="_blank" className="special-button">
-                <FontAwesomeIcon className="icon" icon={faWindowMaximize} />
-                  Website
-                </a>
-              }
-              
-            </footer>
-           
-          </div>
-        </Modal>
+        <Navbar isLight={menuBtnIsLight}>
+            <ul>
+              <li><a href="#home"><FontAwesomeIcon className="icon" icon={faHome} /> Home</a></li>
+              <li><a href="#about"><FontAwesomeIcon className="icon" icon={faUser} /> Sobre mim</a></li>
+              <li><a href="#skills"><FontAwesomeIcon className="icon" icon={faScrewdriverWrench} /> Habilidades</a></li>
+              <li><a href="#contact"><FontAwesomeIcon className="icon" icon={faAddressBook} /> Contate-me</a></li>
+              <li><a href="#social"><FontAwesomeIcon className="icon" icon={faHashtag} /> Social</a></li>
+              <li><Link to="/projects"><FontAwesomeIcon className="icon" icon={faDiagramProject} /> Projetos</Link></li>
+            </ul>
+        </Navbar>
 
         <div
           ref={el => { sectionsContainer.current = el; setRefVisible(!!el); }}
           className="sections"
           onWheel= {(e) => {handleScroll(e.deltaY)}}
           onScroll={() => {  
-            setMenuBtnIsLight(checkIfSectionIsVisible(sectionsBtnLight));
+            setMenuBtnIsLight(sectionIsVisible(sectionsBtnLight));
           }}
         >
 
@@ -248,37 +196,12 @@ export function Home(){
                   <FontAwesomeIcon className="tech" icon={faGithub} />
                 </div>
 
-                <a href="https://github.com/gustavohps10" target="_blank" className="special-button">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></a>
+                <Link to="projects" className="special-button">Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} /></Link>
             </div>
             <img src={skillsImg} alt="Skills" />
           </section>
 
-          <section id="portifolio">
-            <div>
-              <h1>Portifolio</h1>
-              <div className="box-container">
-                {
-                  Projects.map(project =>{
-                  return(
-                    <div className="box" key={project.id} onClick={()=>{setSelectedProject(project); setModalVisible(true)}}>
-                      <img src={project.image} />
-                    
-                      <div className="content">
-                        <span>{project.name}</span>
-                        <p className="description">
-                          {project.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-                         
-          </section>
-
           <section id="contact">
-            
             <div>
               <h1>Precisa de um desenvolvedor? Entre em contato</h1>
               <form action="https://formsubmit.co/gustavoh.santos735@gmail.com" method="POST">

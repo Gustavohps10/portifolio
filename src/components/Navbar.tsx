@@ -1,12 +1,12 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faAddressBook, faDiagramProject, faHashtag, faHome, faLightbulb, faScrewdriverWrench, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react"
+import React, { useState } from "react"
 
 import '../styles/navbar.scss'
 
 type NavbarProps ={
     isLight: boolean
+    children?: React.ReactNode
 }
 
 export function Navbar(props: NavbarProps) {
@@ -26,15 +26,8 @@ export function Navbar(props: NavbarProps) {
                     onClick={toggleButton}
             ></button>
             <nav className={isActive ? "active" : ''}>
-                <ul>
-                    <li><a href="#home"><FontAwesomeIcon className="icon" icon={faHome} /> Home</a></li>
-                    <li><a href="#about"><FontAwesomeIcon className="icon" icon={faUser} /> Sobre mim</a></li>
-                    <li><a href="#skills"><FontAwesomeIcon className="icon" icon={faScrewdriverWrench} /> Habilidades</a></li>
-                    <li><a href="#portifolio"><FontAwesomeIcon className="icon" icon={faDiagramProject} /> Projetos</a></li>
-                    <li><a href="#contact"><FontAwesomeIcon className="icon" icon={faAddressBook} /> Contate-me</a></li>
-                    <li><a href="#social"><FontAwesomeIcon className="icon" icon={faHashtag} /> Social</a></li>
-                </ul>
-
+                {props.children}
+                
                 <a href="https://github.com/gustavohps10" target="_blank"><FontAwesomeIcon id="github-icon" icon={faGithub} /></a>
             </nav>
             
