@@ -21,7 +21,7 @@ export function Navbar(props: NavbarProps) {
 
     function copyToClipboad(text: string) {
         navigator.clipboard.writeText(text).then(()=>{
-            toast.success("Copiado!", {
+            toast.success("Username copiado!", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
