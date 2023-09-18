@@ -1,5 +1,5 @@
 <h1 align="center">Meu Portifolio</h1>
-<a href="https://gustavohenrique.ga" target="_blank"><img src="https://user-images.githubusercontent.com/61752235/156041545-cf386e3b-627d-4d10-bfc6-1ba5452e6bfc.PNG"/></a>
+<a href="https://gustavohenrique.site" target="_blank"><img src="https://user-images.githubusercontent.com/61752235/156041545-cf386e3b-627d-4d10-bfc6-1ba5452e6bfc.PNG"/></a>
 
 # 📝 Descrição
 
