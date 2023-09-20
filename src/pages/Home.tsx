@@ -21,12 +21,13 @@ export function Home(){
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
     const [refVisible, setRefVisible] = useState(false);
+    const [scrollTime, setScrollTime] = useState<number>(0)
     const sectionsBtnLight = [
       sectionsContainer.current?.children[4],
       sectionsContainer.current?.children[2]
-    ];
+    ];    
 
-    
+
     useEffect(() => {
       if (!refVisible) { 
         return
@@ -70,11 +71,17 @@ export function Home(){
     }
 
     function handleScroll(deltaY: number){
-      if(window.screen.width > 1024){
-        deltaY > 0 
-        ? sectionsContainer.current?.scrollBy(0, 200)
-        : sectionsContainer.current?.scrollBy(0, -200);
+      let currentTime = new Date().getTime()
+      setScrollTime(currentTime)
+
+      if(currentTime > scrollTime + 200){ // wait 200 milliseconds to scroll again
+        if(window.screen.width > 1024){
+            deltaY > 0 
+            ? sectionsContainer.current?.scrollBy(0, 100)
+            : sectionsContainer.current?.scrollBy(0, -100);
+        }
       }
+
     }
 
     return(
