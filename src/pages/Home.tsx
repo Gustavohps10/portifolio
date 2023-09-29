@@ -8,8 +8,8 @@ import aboutImg from '../assets/images/about.svg'
 import skillsImg from '../assets/images/skills.svg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython, faRProject} from '@fortawesome/free-brands-svg-icons'
-import {faAddressBook, faDiagramProject, faHashtag, faHome, faProjectDiagram, faScrewdriverWrench, faUser, faWindowMaximize} from '@fortawesome/free-solid-svg-icons'
+import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython} from '@fortawesome/free-brands-svg-icons'
+import {faAddressBook, faDiagramProject, faHashtag, faHome, faProjectDiagram, faScrewdriverWrench, faUser} from '@fortawesome/free-solid-svg-icons'
 
 import {useEffect, useRef, useState} from "react";
 
@@ -43,7 +43,7 @@ export function Home(){
 
       sr.reveal(
         `
-        #home aside div, #home img,
+        #home aside > div, #home img,
         #about img,
         #skills img,
         #portifolio .box
@@ -120,15 +120,29 @@ export function Home(){
                         <Typewriter
                           options={{
                             loop: true,
+                            autoStart: true,
                           }}
                           onInit={(typewriter) => {
                             typewriter
-                              .typeString('Desenvolvedor Web e entusiasta de tecnologia!')
-                              .pauseFor(2500)
+                              .typeString("Desenvolvedor Web e entusiasta de tecnologia! 💻")
+                              .pauseFor(1500)
+                              .deleteAll()
+                              .typeString("Meus principais hobbies são: ")
+                              .pauseFor(500)
+                              .typeString("jogar video game 🎮")
+                              .pauseFor(1500)
+                              .deleteChars(19)
+                              .typeString("estudar programação </>")
+                              .pauseFor(1500)
+                              .deleteChars(23)
+                              .typeString("assistir futebol ⚽")
+                              .pauseFor(1500)
                               .deleteAll()
                               .start();
                           }}
+                          
                         />
+                         <Link to="projects" className="special-button">Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} /></Link>
                   </div>
               </aside>
               <div>
@@ -203,7 +217,7 @@ export function Home(){
                   <FontAwesomeIcon className="tech" icon={faGithub} />
                 </div>
 
-                <Link to="projects" className="special-button">Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} /></Link>
+                <a href="https://github.com/gustavohps10" target="_blank" className="special-button">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></a>
             </div>
             <img src={skillsImg} alt="Skills" />
           </section>

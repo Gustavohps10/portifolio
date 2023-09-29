@@ -72,6 +72,7 @@ section#home{
             .Typewriter{
                 margin-top: 15px;
                 font-size: 30px;
+                min-height: 70px;
             }
 
         }
@@ -89,6 +90,10 @@ section#home{
         img{
             width: 90%;
         }
+    }
+
+    .special-button:hover{
+        color: #8257e6;
     }
 }
 
@@ -290,9 +295,12 @@ section#social{
             flex: none;
             width: 100%;
             height: 55%;
+            padding: 12px 24px;
 
             .introduction{
+                margin-top: 40px;
                 width: 100%;
+
                 h1{
                     font-size: 2.8rem;
                     line-height: 3.2rem;
@@ -327,13 +335,22 @@ section#social{
                 min-width: 250px;
             }
         }
+
+        .special-button{
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     section#about{
+        flex-direction: column-reverse;
+        gap: 34px;
+
         > img{
             min-width: 200px;
         }
         .content{
+           
             text-align: center;
             h1{
                 font-size: 40px;
@@ -426,6 +443,12 @@ section#social{
         }
     }  
 
+    section#about{
+        .content{
+            width: auto;
+        }
+    }
+    
     section#skills{
         .content{
             h1{
