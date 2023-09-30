@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+
 type NavbarProps ={
     isLight: boolean
     children?: React.ReactNode
@@ -14,6 +16,11 @@ type NavbarProps ={
 
 export function Navbar(props: NavbarProps) {
     const [isActive, setActive] = useState(false);
+    const [isDarkMode, setDarkMode] = useState(true);
+
+    const toggleDarkMode = (checked: boolean) => {
+        setDarkMode(checked);
+    };
 
     function toggleButton(){
         setActive(!isActive);
@@ -29,8 +36,7 @@ export function Navbar(props: NavbarProps) {
                 pauseOnHover: true,
                 draggable: true,
                 progress: 0,
-                theme: "dark"
-                
+                theme: "dark"     
             })
         })
         
@@ -57,6 +63,13 @@ export function Navbar(props: NavbarProps) {
                         className={`${isActive ? "active" : ''} ${props.isLight ? "light" : ''}`}
                         onClick={toggleButton}
                 ></button>
+                <DarkModeSwitch
+                    className="switch-theme"
+                    checked={isDarkMode}
+                    onChange={toggleDarkMode}
+                    size={30}
+                />
+                
                 <nav className={isActive ? "active" : ''}>
                     {props.children}
 
@@ -99,6 +112,7 @@ export function Navbar(props: NavbarProps) {
                         </a>
                     </div>
                 </nav>
+                
                 
             </header>
         </>
