@@ -8,4 +8,8 @@ export default createGlobalStyle`
         font-family: Poppins, sans-serif;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+
+    body{
+        background-color: ${props => props.theme.colors.background};
+    }
 `
