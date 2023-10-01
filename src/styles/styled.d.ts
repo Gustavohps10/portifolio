@@ -9,6 +9,7 @@ declare module 'styled-components' {
         tertiary: string;
         background: string;
         text: string;
+        navbar: string;
     },
     toggleTheme(): void
   }

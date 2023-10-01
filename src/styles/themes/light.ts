@@ -4,7 +4,8 @@ export default {
         primary: "#8257e6",
         secondary: "#6421ff",
         tertiary: "#322650",
-        background: "#fff",
-        text: "#121214"
+        background: "#fbfbfb",
+        text: "#121214",
+        navbar: "#fff"
     }
 }

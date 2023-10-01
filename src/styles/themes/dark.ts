@@ -5,6 +5,7 @@ export default {
         secondary: "#6421ff",
         tertiary: "#322650",
         background: "#121214",
-        text: "#fff"
+        text: "#fff",
+        navbar: "#18181a"
     }
 }
