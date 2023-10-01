@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import '../styles/navbar.scss'
 
 import { faGithub, faReddit, faLinkedin, faSteam, faDiscord } from "@fortawesome/free-brands-svg-icons"; 
@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { ThemeContext, DefaultTheme } from "styled-components";
 
 type NavbarProps ={
     isLight: boolean
@@ -15,11 +16,13 @@ type NavbarProps ={
 }
 
 export function Navbar(props: NavbarProps) {
+    const theme = useContext(ThemeContext)
     const [isActive, setActive] = useState(false);
-    const [isDarkMode, setDarkMode] = useState(true);
+   
+    console.log(theme);
 
     const toggleDarkMode = (checked: boolean) => {
-        setDarkMode(checked);
+        theme?.toggleTheme()
     };
 
     function toggleButton(){
@@ -63,9 +66,10 @@ export function Navbar(props: NavbarProps) {
                         className={`${isActive ? "active" : ''} ${props.isLight ? "light" : ''}`}
                         onClick={toggleButton}
                 ></button>
+
                 <DarkModeSwitch
                     className="switch-theme"
-                    checked={isDarkMode}
+                    checked={theme?.title == "dark"}
                     onChange={toggleDarkMode}
                     size={30}
                 />
