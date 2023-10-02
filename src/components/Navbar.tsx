@@ -32,7 +32,7 @@ export function Navbar(props: NavbarProps) {
 
     function copyToClipboad(text: string) {
         navigator.clipboard.writeText(text).then(()=>{
-            toast.success("Username copiado!", {
+            toast.success("Discord copiado!", {
                 position: "top-center",
                 autoClose: 3000,
                 hideProgressBar: false,
@@ -40,7 +40,7 @@ export function Navbar(props: NavbarProps) {
                 pauseOnHover: true,
                 draggable: true,
                 progress: 0,
-                theme: "dark"     
+                theme: theme?.title === "dark" ? "dark" : "light"    
             })
         })
         
