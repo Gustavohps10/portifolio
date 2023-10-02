@@ -18,7 +18,6 @@ const sharedStyle = css<ButtonProps>`
     border: 1px solid ${props => props.$borderColor ? props.$borderColor : "transparent"};
     width: 200px;
     padding: 10px 15px;
-    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,15 +36,20 @@ const sharedStyle = css<ButtonProps>`
         transform: translateX(-50%);
     }
 
+    &.small{
+        padding: 5px 15px;
+        font-size: 14px;
+        width: auto;
+
+        .icon{
+            height: 24px;
+        }
+    }
+
     &:hover{
         color: ${props => props.$hoverTextColor ? props.$hoverTextColor : props.theme.colors.text };
         background: ${props => props.$hoverBackgroundColor ? props.$hoverBackgroundColor : props.theme.colors.primary};
         border-color: ${props => props.$hoverBackgroundColor ? props.$hoverBackgroundColor : props.theme.colors.primary};
-    }
-
-    @media (max-width: 800px) {
-        left: 50%;
-        transform: translateX(-50%);
     }
 `
 

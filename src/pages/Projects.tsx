@@ -1,21 +1,25 @@
+import { useContext, useState } from "react";
 import { faHome, faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
-
-import projectsList from '../data/projects.json'
-import Modal from "../components/Modal";
-
-import "../styles/projects.scss" 
-import { useState } from "react";
 import { faDiscord, faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-
+import { Link } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { Helmet } from "react-helmet";
-import Section from "../styles/Section.styled";
+
+import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
-interface ProjectType {
+import projectsList from '../data/projects.json'
+
+import "../styles/projects.scss" 
+
+import Section from "../styles/Section.styled";
+import ModalStyled from "../styles/Modal.styled";
+import { Button } from "../styles/Button.styled";
+import { ThemeContext } from "styled-components";
+ModalStyled.setAppElement("body")
+
+interface ProjectProps {
     id: number,
     name: string
     logo?: string
@@ -24,18 +28,26 @@ interface ProjectType {
     website?: string 
     description: string
     longDescription: string
-    shields: Array<string>
+    shields: {
+        light: Array<string>
+        dark: Array<string>
+    }
 }
 
 export default function Projects() {
-    const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null)
-    const [modalVisible, setModalVisible] = useState(false)
+    const theme = useContext(ThemeContext)
+    const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null)
+    const [modalIsOpen, setModalIsOpen] = useState(false)
     
-    function handleModalClick(target: Element) {
-        if(target.classList.contains("modal-box")){
-          setModalVisible(false)
-        }
+    function openModal() {
+        setModalIsOpen(true);
     }
+
+    function closeModal() {
+        setSelectedProject(null)
+        setModalIsOpen(false);
+    }
+
     return(
         <>
             <HelmetProvider>
@@ -49,9 +61,11 @@ export default function Projects() {
                     <li><Link to="/"><FontAwesomeIcon className="icon" icon={faHome} /> Home</Link></li>
                 </ul>
             </Navbar>
-
             
-            <Modal onClick={(e) => handleModalClick(e.target as Element)} visible={modalVisible}>
+            <ModalStyled
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+            >
                 <div>
                     <img className="main-image" src={selectedProject?.image} alt={selectedProject?.name} />
                     
@@ -62,7 +76,13 @@ export default function Projects() {
                     <p className="description">{selectedProject?.longDescription}</p>
 
                     <div className="shields-containter">
-                    {selectedProject?.shields.map((shield)=>{
+                    {theme?.title === "dark" && selectedProject?.shields.dark.map((shield)=>{
+                        return(
+                        <img key={shield} src={shield}/>
+                        )
+                    })}
+
+                    {theme?.title === "light" && selectedProject?.shields.light.map((shield)=>{
                         return(
                         <img key={shield} src={shield}/>
                         )
@@ -72,21 +92,43 @@ export default function Projects() {
                     <hr />
 
                     <footer>
-                        <a href={selectedProject?.github} target="_blank" className="special-button">
+                        <Button
+                            as="a"
+                            target="_blank" 
+                            href={selectedProject?.github}
+                            className="small"
+                            $fillType="filled"
+                            $textColor="#fff"
+                            $backgroundColor={theme?.colors.primary}
+                            $borderColor={theme?.colors.primary}
+                            $hoverTextColor="#fff"
+                            $hoverBackgroundColor="#533793"
+                        >
                             <FontAwesomeIcon className="icon" icon={faGithub} />
-                            Código fonte
-                        </a>
+                            Código Fonte
+                        </Button>
 
                         {selectedProject?.website &&
-                            <a href={selectedProject.website} target="_blank" className="special-button">
-                            <FontAwesomeIcon className="icon" icon={faWindowMaximize} />
-                            Website
-                            </a>
+                            <Button
+                                as="a"
+                                target="_blank" 
+                                href={selectedProject?.website}
+                                className="small"
+                                $fillType="filled"
+                                $textColor="#fff"
+                                $backgroundColor={theme?.colors.primary}
+                                $borderColor={theme?.colors.primary}
+                                $hoverTextColor="#fff"
+                                $hoverBackgroundColor="#533793"
+                            >
+                                <FontAwesomeIcon className="icon" icon={faWindowMaximize} />
+                                Website
+                            </Button>
                         }
                     </footer>
                 
                 </div>
-            </Modal>
+            </ModalStyled>
 
             <Section id="projects">
                 <div>
@@ -95,19 +137,20 @@ export default function Projects() {
                     <div className="box-container">
                         {
                         projectsList.map(project =>{
-                        return(
-                            <div className="box" key={project.id} onClick={()=>{setSelectedProject(project); setModalVisible(true)}}>
-                            <img src={project.image} />
-                            
-                            <div className="content">
-                                <span>{project.name}</span>
-                                <p className="description">
-                                {project.description}
-                                </p>
-                            </div>
-                            </div>
-                        );
-                        })}
+                            return(
+                                <div className="box" key={project.id} onClick={()=>{setSelectedProject(project); setModalIsOpen(true)}}>
+                                    <img src={project.image} />
+                                    
+                                    <div className="content">
+                                        <span>{project.name}</span>
+                                        <p className="description">
+                                        {project.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            );
+                        })
+                        }
                     </div>  
                 </div>  
             </Section>
