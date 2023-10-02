@@ -1,8 +1,6 @@
-:root{
-    --toastify-color-success: #8c6adb !important;
-}
+import styled from "styled-components";
 
-header{
+const Header = styled.header`
     position: fixed;
     top: 20px;
     width: 100vw;
@@ -23,7 +21,7 @@ header{
     }
 
     nav{
-        background-color: #18181a;
+        background-color: ${props => props.theme.colors.navbar};
         transform: scale(0.3);
         transform-origin: top right;
         position: absolute;
@@ -43,7 +41,7 @@ header{
                 margin-top: 15px;
                 a{
                     position: relative;
-                    color: rgb(196, 196, 196);
+                    color: ${props => props.theme.colors.text};
                     text-decoration: none;
                     font-size: 20px;
                     transition: all .2s linear;
@@ -57,14 +55,13 @@ header{
                         position: absolute;
                         bottom: -8px;
                         left: 0;
-                        background-color: #8257e6;
+                        background-color: ${props => props.theme.colors.primary};
                         width: 0px;
                         height: 4px;
                         transition: all .2s linear;
                     }
                     
                     &:hover{
-                        color: #fff;
         
                         &::after{
                             width: 100%;
@@ -72,22 +69,7 @@ header{
                     }
                 }
             }
-        }
-
-        #github-icon{
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            height: 50px;
-            width: 50px;
-            color: #444444;
-            transition: all .2s ease;
-
-            &:hover{
-                color: #fff;
-            }
-        }
-        
+        }        
 
         &.active{
             pointer-events: all;
@@ -129,7 +111,7 @@ header{
         }
 
         &::before{
-            top: 5px;
+            top: 6px;
             left: 0;
             width: 100%;
         }
@@ -137,7 +119,7 @@ header{
         &::after{
             right: 0;
             width: 72%;
-            top: 17px;
+            top: 18px;
         }
 
         &.active{
@@ -157,6 +139,16 @@ header{
         }
     }
 
+    .switch-theme{
+        pointer-events: all;
+        position: relative;
+        z-index: 1001;
+        top: 50%;
+        transform: translateY(-50%) rotate(40deg) !important;
+        float: right;
+        right: 14px;
+    }
+
     hr{
         border: none;
         height: 1px;
@@ -173,6 +165,7 @@ header{
             color: #fff;
             text-decoration: none;
         }
+
         .tag{
             display: flex;
             cursor: pointer;
@@ -181,7 +174,7 @@ header{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #8257e6;
+                background-color:  ${props => props.theme.colors.primary};
                 width: 25px;
                 height: 25px;
 
@@ -191,7 +184,8 @@ header{
             }
 
             span{
-                background-color: #20232A;
+                color:  ${props => props.theme.colors.text};
+                background-color:  ${props => props.theme.colors.background};
                 display: flex;
                 align-items: center;
                 font-size: 12px;
@@ -199,14 +193,16 @@ header{
             }
         }
     }
-}
-
-
-@media (max-width: 800px){
-    header{
+    
+    @media (max-width: 800px){
         top: 0px;
         padding: 0 25px;
-        background-color: #121214;
+        background-color: ${props => props.theme.colors.background};
+
+        .logo svg g{
+            stroke: ${props => props.theme.colors.text};
+            fill: ${props => props.theme.colors.text};
+        }
 
         nav{
             width: 265px;
@@ -223,7 +219,7 @@ header{
 
         button{
             &::before, &::after{
-                background-color: #fff;
+                background-color: ${props => props.theme.colors.text};
             }
         }
 
@@ -234,10 +230,13 @@ header{
 
             .tag{
                 padding: 5px;
+                border-radius: 2px;
 
                 .icon{
                     width: 30px;
                     height: 30px;
+                    border-radius: 2px;
+                    
                     > svg{
                         width: 25px;
                     }
@@ -249,19 +248,17 @@ header{
                 }
 
                 &:hover{
-                    
-                    background-color: #20232A;
-                    
+                    background-color:  ${props => props.theme.colors.background};
                 }
             }
         }
     }
-}
 
-@media (max-width: 570px){
-    header{
+    @media (max-width: 570px){
         .logo{
             width: 120px;
         }
     }
-}
+`;
+
+export default Header

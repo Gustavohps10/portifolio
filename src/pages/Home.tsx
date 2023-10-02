@@ -11,13 +11,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faDiscord,faGithub,faLinkedin, faWhatsapp, faHtml5, faCss3Alt, faJs, faPhp, faReact, faBootstrap, faGitAlt, faPython} from '@fortawesome/free-brands-svg-icons'
 import {faAddressBook, faDiagramProject, faHashtag, faHome, faProjectDiagram, faScrewdriverWrench, faUser} from '@fortawesome/free-solid-svg-icons'
 
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 
 import scrollreveal from 'scrollreveal'
 import Typewriter from "typewriter-effect"
 import { Link } from "react-router-dom";
 
+import Section from "../styles/Section.styled";
+import {Button, StyledLink} from "../styles/Button.styled";
+import { ThemeContext } from "styled-components";
+
 export function Home(){
+    const theme = useContext(ThemeContext) 
     const sectionsContainer = useRef<HTMLDivElement | null>(null);
     const [menuBtnIsLight, setMenuBtnIsLight] = useState(false);
     const [refVisible, setRefVisible] = useState(false);
@@ -112,11 +117,11 @@ export function Home(){
           }}
         >
 
-          <section id="home">
+          <Section id="home">
               <aside>
                   <div className="introduction">
                       <h1>Oi, eu sou </h1>     
-                      <h2>Gustavo Henrique</h2>     
+                      <h2>Gustavo Henrique. </h2>     
                         <Typewriter
                           options={{
                             loop: true,
@@ -142,29 +147,48 @@ export function Home(){
                           }}
                           
                         />
-                         <Link to="projects" className="special-button">Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} /></Link>
+                        <StyledLink 
+                          $fillType="outline"
+                          $textColor="#fff"
+                          $hoverBackgroundColor="#fff"
+                          $hoverTextColor={theme?.colors.primary}
+                          $borderColor="#fff"
+                          style={{marginTop: "40px"}}
+                          className="centralized-md"
+                          to="projects">
+                          Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
+                        </StyledLink>
                   </div>
               </aside>
               <div>
                   <img src={homeImg} alt="HOME" />
               </div>
-          </section>
+          </Section>
 
-          <section id="about">
+          <Section id="about">
   
             <img src={aboutImg} alt="About" />
             
             <div className="content">
                 <h1>Sobre mim</h1>
-                <p>
-                  Sou um desenvolvedor Web localizado em Maringá-PR. Solucionar problemas através das linhas de código é meu principal objetivo.
-                </p>
+                <p>Sou um desenvolvedor Web localizado em Maringá-PR. Solucionar problemas através das linhas de código é meu principal objetivo.</p>
                 <p>Comecei na programação há 2 anos, desde então venho aprimorando meus conhecimentos consumindo cursos, videoaulas e aplicando o que aprendi em diversos projetos pessoais.</p>
-              <a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank" className="special-button">Meu Linkedin <FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
+              <Button 
+                $fillType="outline"
+                $textColor={theme?.colors.text}
+                $hoverTextColor={theme?.colors.background}
+                $hoverBackgroundColor={theme?.colors.text}
+                $borderColor={theme?.colors.text}
+                style={{marginTop: "40px"}}
+                className="centralized-md"
+                as="a" 
+                href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" 
+                target="_blank" 
+                rel="noopener noreferrer">Meu Linkedin <FontAwesomeIcon className="icon" icon={faLinkedin} /></Button>
             </div>
-          </section>
+          </Section>
 
-          <section id="skills">
+          <Section id="skills">
             <div className="content">
                 <h1>Habilidades</h1>
                 <p>
@@ -217,14 +241,25 @@ export function Home(){
                   <FontAwesomeIcon className="tech" icon={faGithub} />
                 </div>
 
-                <a href="https://github.com/gustavohps10" target="_blank" className="special-button">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></a>
+                <Button 
+                  $fillType="outline"
+                  $textColor="#fff"
+                  $hoverBackgroundColor="#fff"
+                  $hoverTextColor={theme?.colors.tertiary}
+                  $borderColor="#fff"
+                  style={{marginTop: "40px"}}
+                  className="centralized-md"
+                  as="a" 
+                  href="https://github.com/gustavohps10" 
+                  target="_blank" 
+                  rel="noopener noreferrer">Meu Github <FontAwesomeIcon className="icon" icon={faGithub} /></Button>
             </div>
             <img src={skillsImg} alt="Skills" />
-          </section>
+          </Section>
 
-          <section id="contact">
+          <Section id="contact">
             <div>
-              <h1>Precisa de um desenvolvedor? Entre em contato</h1>
+              <h1>Entre em contato</h1>
               <form action="https://formsubmit.co/gustavoh.santos735@gmail.com" method="POST">
                 <label>Nome</label>
                 <input type="text" name="name" placeholder="Digite seu nome"/>
@@ -238,13 +273,22 @@ export function Home(){
                 <textarea placeholder="Digite uma mensagem" name="message"></textarea>
                 <br />
 
-                <button className="special-button" type="submit">Enviar</button>
+                <Button
+                  $fillType="filled"
+                  $textColor="#fff"
+                  $backgroundColor={theme?.colors.primary}
+                  $borderColor={theme?.colors.primary}
+                  $hoverTextColor="#fff"
+                  $hoverBackgroundColor="#533793"
+                  className="centralized"
+                  style={{marginTop: "40px"}}
+                  type="submit">Enviar</Button>
               </form>
             </div>
 
-          </section>
+          </Section>
 
-          <section id="social">
+          <Section id="social">
             <div>
               <ul>
                 <li className="title">Contate-me</li>
@@ -253,15 +297,15 @@ export function Home(){
               </ul>
               <ul>
                 <li className="title">Social</li>
-                <li><a href="http://github.com/gustavohps10" target="_blank"><FontAwesomeIcon className="icon" icon={faGithub} />Github</a></li>
-                <li><a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank"><FontAwesomeIcon className="icon" icon={faLinkedin} /> Linkedin</a></li>
-                <li><a href="https://discord.com/invite/wY7rhAde5x" target="_blank"><FontAwesomeIcon className="icon" icon={faDiscord} /> Discord</a></li>
-                <li><a href="http://wa.me/5544988054126" target="_blank"><FontAwesomeIcon className="icon" icon={faWhatsapp} /> Whatsapp</a></li>
+                <li><a href="http://github.com/gustavohps10" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="icon" icon={faGithub} />Github</a></li>
+                <li><a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="icon" icon={faLinkedin} /> Linkedin</a></li>
+                <li><a href="https://discord.com/invite/wY7rhAde5x" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="icon" icon={faDiscord} /> Discord</a></li>
+                <li><a href="http://wa.me/5544988054126" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon className="icon" icon={faWhatsapp} /> Whatsapp</a></li>
               </ul>
             </div>
             <hr />
             <span>© Made with ❤️ Gustavo Henrique 2023</span>
-          </section>
+          </Section>
         </div>
       </> 
     )
