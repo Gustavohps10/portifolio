@@ -12,6 +12,8 @@ import { faDiscord, faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-b
 
 import { HelmetProvider } from "react-helmet-async";
 import { Helmet } from "react-helmet";
+import Section from "../styles/Section.styled";
+import Footer from "../components/Footer";
 
 interface ProjectType {
     id: number,
@@ -86,7 +88,7 @@ export default function Projects() {
                 </div>
             </Modal>
 
-            <section id="projects">
+            <Section id="projects">
                 <div>
                     <h1>Projetos</h1>
                     <h2>Uma pequena demonstração do que já desenvolvi ao longo da minha jornada.</h2>
@@ -108,27 +110,12 @@ export default function Projects() {
                         })}
                     </div>  
                 </div>  
-            </section>
+            </Section>
 
             
-          <section id="social">
-            <div>
-              <ul>
-                <li className="title">Contate-me</li>
-                <li className="my-email"> gustavoh.santos735@gmail.com</li>
-                <li>(44) 98462-8599</li>
-              </ul>
-              <ul>
-                <li className="title">Social</li>
-                <li><a href="http://github.com/gustavohps10" target="_blank"><FontAwesomeIcon className="icon" icon={faGithub} />Github</a></li>
-                <li><a href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" target="_blank"><FontAwesomeIcon className="icon" icon={faLinkedin} /> Linkedin</a></li>
-                <li><a href="https://discord.com/invite/wY7rhAde5x" target="_blank"><FontAwesomeIcon className="icon" icon={faDiscord} /> Discord</a></li>
-                <li><a href="http://wa.me/5544984628599" target="_blank"><FontAwesomeIcon className="icon" icon={faWhatsapp} /> Whatsapp</a></li>
-              </ul>
-            </div>
-            <hr />
-            <span>© Made with ❤️ Gustavo Henrique 2022</span>
-          </section>
+          <Section id="social">
+            <Footer/>
+          </Section>
         </>
     )
 }

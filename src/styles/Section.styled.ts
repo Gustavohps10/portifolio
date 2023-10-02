@@ -207,6 +207,90 @@ const Section = styled.section`
         }
     }
 
+    &#projects{
+        position: relative;
+        padding: 120px;
+        color: ${props => props.theme.colors.text};
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+            color: ${props => props.theme.colors.text};
+        }
+
+        h2{
+            text-align: center;
+            color: #717171;
+            font-weight: 400;
+        }
+
+        .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            justify-content: center;
+            gap: 20px;
+            margin-top: 100px;
+            padding: 0px 12px;
+
+            .box{
+                overflow: hidden;
+                position: relative;
+                background-color: ${props => props.theme.colors.background};
+                box-shadow: -1px 1px 7px #00000052;
+                transition: all .2s linear;
+                cursor: pointer;
+                min-height: 300px;
+
+                img{
+                    width: 100%;
+                    height: 170px;
+                    object-fit: cover;
+                    transition: all .2s linear;
+                }
+
+                .content{
+                    margin-top: -7px;
+                    padding: 8px;
+
+                    span{
+                        font-weight: 600;
+                        font-size: 18px;
+                        display: block;
+                        margin-bottom: 3px;
+                    }
+
+                    .description{
+                        font-size: 13px;
+                        color: #717171;
+                        margin: 5px 0;
+                    }  
+                }
+
+                &:hover{
+                    transform: translateY(-10px);
+                    img{
+                        filter: brightness(0.6);
+                    }
+                } 
+            }
+
+            &::-webkit-scrollbar {
+                width: 15px;
+                height: 15px;
+                background-color: rgb(0, 0, 0, 28%);
+                border-radius: 10px;
+            
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-color: rgba(100, 100, 100, 0.49);
+                background-color: #4e4e4ecf;
+                border: 3px solid transparent;
+                background-clip: content-box;
+            }
+        }
+    }
 
     @media (max-width: 800px){
         &#home{
