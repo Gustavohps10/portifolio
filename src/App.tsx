@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./pages/Home";
@@ -10,9 +9,10 @@ import GlobalStyle from "./styles/global"
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
+import usePersistedState from "./utils/usePersistedState";
 
 function App() {
-  const [theme, setTheme] = useState(dark)
+  const [theme, setTheme] = usePersistedState("theme", dark)
 
   function toggleTheme() {
     setTheme(theme.title == "light" ? dark : light);
