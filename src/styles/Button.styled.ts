@@ -36,6 +36,8 @@ const sharedStyle = css<ButtonProps>`
         transform: translateX(-50%);
     }
 
+    &.center
+
     &.small{
         padding: 5px 15px;
         font-size: 14px;
@@ -50,6 +52,13 @@ const sharedStyle = css<ButtonProps>`
         color: ${props => props.$hoverTextColor ? props.$hoverTextColor : props.theme.colors.text };
         background: ${props => props.$hoverBackgroundColor ? props.$hoverBackgroundColor : props.theme.colors.primary};
         border-color: ${props => props.$hoverBackgroundColor ? props.$hoverBackgroundColor : props.theme.colors.primary};
+    }
+
+    @media (max-width: 800px){
+        &.centralized-md{
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 `
 

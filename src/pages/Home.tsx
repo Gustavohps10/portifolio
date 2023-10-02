@@ -153,6 +153,8 @@ export function Home(){
                           $hoverBackgroundColor="#fff"
                           $hoverTextColor={theme?.colors.primary}
                           $borderColor="#fff"
+                          style={{marginTop: "40px"}}
+                          className="centralized-md"
                           to="projects">
                           Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
                         </StyledLink>
@@ -177,6 +179,8 @@ export function Home(){
                 $hoverTextColor={theme?.colors.background}
                 $hoverBackgroundColor={theme?.colors.text}
                 $borderColor={theme?.colors.text}
+                style={{marginTop: "40px"}}
+                className="centralized-md"
                 as="a" 
                 href="https://www.linkedin.com/in/gustavo-henrique-pereira-dos-santos-69a423210/" 
                 target="_blank" 
@@ -243,6 +247,8 @@ export function Home(){
                   $hoverBackgroundColor="#fff"
                   $hoverTextColor={theme?.colors.tertiary}
                   $borderColor="#fff"
+                  style={{marginTop: "40px"}}
+                  className="centralized-md"
                   as="a" 
                   href="https://github.com/gustavohps10" 
                   target="_blank" 
@@ -275,6 +281,7 @@ export function Home(){
                   $hoverTextColor="#fff"
                   $hoverBackgroundColor="#533793"
                   className="centralized"
+                  style={{marginTop: "40px"}}
                   type="submit">Enviar</Button>
               </form>
             </div>
