@@ -36,8 +36,6 @@ const sharedStyle = css<ButtonProps>`
         transform: translateX(-50%);
     }
 
-    &.center
-
     &.small{
         padding: 5px 15px;
         font-size: 14px;

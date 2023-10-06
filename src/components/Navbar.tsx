@@ -19,8 +19,6 @@ type NavbarProps ={
 export function Navbar(props: NavbarProps) {
     const theme = useContext(ThemeContext)
     const [isActive, setActive] = useState(false);
-   
-    console.log(theme);
 
     const toggleDarkMode = (checked: boolean) => {
         theme?.toggleTheme()

@@ -156,7 +156,7 @@ export function Home(){
                           style={{marginTop: "40px"}}
                           className="centralized-md"
                           to="projects">
-                          Meus Projetos <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
+                          Meus Projetos <span>🚀</span>
                         </StyledLink>
                   </div>
               </aside>
