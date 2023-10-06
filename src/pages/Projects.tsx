@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { faHome, faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -9,18 +9,20 @@ import { Helmet } from "react-helmet";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
-import projectsList from '../data/projects.json'
-
 import "../styles/projects.scss" 
 
 import Section from "../styles/Section.styled";
 import ModalStyled from "../styles/Modal.styled";
 import { Button } from "../styles/Button.styled";
 import { ThemeContext } from "styled-components";
+
+import { collection, getDocs, addDoc, query, orderBy } from "firebase/firestore";
+import { database } from "../services/firebase";
+
 ModalStyled.setAppElement("body")
 
 interface ProjectProps {
-    id: number,
+    id: string,
     name: string
     logo?: string
     image: string
@@ -35,9 +37,23 @@ interface ProjectProps {
 }
 
 export default function Projects() {
+    const [projects, setProjects] = useState<ProjectProps[]>([])
     const theme = useContext(ThemeContext)
     const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(null)
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    
+    useEffect(()=>{
+        const projectsCollection = collection(database, "projects")
+        
+        const getProjects = async () => {
+            const q = query(projectsCollection, orderBy("id"));
+            const data = await getDocs(q)
+            setProjects(data.docs.map(doc => ({...doc.data() as ProjectProps, id: doc.id})))
+        }
+
+        getProjects()
+        
+    }, [])
     
     function openModal() {
         setModalIsOpen(true);
@@ -136,7 +152,7 @@ export default function Projects() {
                     <h2>Uma pequena demonstração do que já desenvolvi ao longo da minha jornada.</h2>
                     <div className="box-container">
                         {
-                        projectsList.map(project =>{
+                        projects.map(project =>{
                             return(
                                 <div className="box" key={project.id} onClick={()=>{setSelectedProject(project); setModalIsOpen(true)}}>
                                     <img src={project.image} />

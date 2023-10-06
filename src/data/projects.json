@@ -49,6 +49,30 @@
     },
     {
         "id": 3,
+        "name": "API Clean Arch",
+        "image": "https://github.com/Gustavohps10/guidenite/raw/main/src/assets/images/example.gif",
+        "github": "https://github.com/Gustavohps10/guidenite",
+        "description": "Um menu com diversas funcionaliadades e layout semelhante ao do Xbox",
+        "longDescription": "Guidenite é um menu que aparece em cima de outros aplicativos. Decidi tornar a interface do meu um computador mais semelhante a interface de um videogame, então criei meu próprio menu usando o Xbox como referência",
+        "shields": {
+            "light": [
+                "https://img.shields.io/badge/Electron-E1E1E1?style=for-the-badge&logo=electron&logoColor=9FEAF9",
+                "https://img.shields.io/badge/React-E1E1E1?style=for-the-badge&logo=react&logoColor=61DAFB",
+                "https://img.shields.io/badge/Node.js-E1E1E1?style=for-the-badge&logo=nodedotjs&logoColor=339933",
+                "https://img.shields.io/badge/HTML5-E1E1E1?style=for-the-badge&logo=html5&logoColor=E34F26",
+                "https://img.shields.io/badge/Sass-E1E1E1?style=for-the-badge&logo=sass&logoColor=CC6699"
+            ],
+            "dark": [
+                "https://img.shields.io/badge/Electron-20232A?style=for-the-badge&logo=electron&logoColor=9FEAF9",
+                "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+                "https://img.shields.io/badge/Node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=339933",
+                "https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26",
+                "https://img.shields.io/badge/Sass-20232A?style=for-the-badge&logo=sass&logoColor=CC6699"
+            ] 
+        }
+    },
+    {
+        "id": 4,
         "name": "Speaker",
         "image": "https://user-images.githubusercontent.com/61752235/153693098-5d065a9b-5392-441f-9fbb-d3bf4e869d9c.gif",
         "github": "https://github.com/Gustavohps10/speaker",
@@ -74,7 +98,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Sistema de reserva de veículos",
         "image": "https://github.com/Gustavohps10/tcc-senai/raw/main/Projeto/images/demo-reserva.gif",
         "github": "https://github.com/Gustavohps10/tcc-senai",
@@ -100,7 +124,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Meu Portifolio",
         "image": "https://user-images.githubusercontent.com/61752235/156041545-cf386e3b-627d-4d10-bfc6-1ba5452e6bfc.PNG",
         "github": "https://github.com/Gustavohps10/portifolio",
@@ -127,7 +151,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Letmeask",
         "image": "https://user-images.githubusercontent.com/61752235/155585407-c1438cfe-8bfd-4a3e-a272-e1e697bb6ce7.PNG",
         "github": "https://github.com/Gustavohps10/letmeask",
@@ -155,7 +179,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Game Gallery - Django",
         "image": "https://user-images.githubusercontent.com/61752235/151655747-2a9cde40-ba66-4736-af03-60643eac0fe8.PNG",
         "github": "https://github.com/Gustavohps10/CRUD-Django",
@@ -181,7 +205,7 @@
         }
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "Flappy Mario",
         "image": "https://user-images.githubusercontent.com/61752235/155443117-d751c1bf-7fab-47b2-96c9-33da380ee201.PNG",
         "github": "https://github.com/Gustavohps10/jogos/tree/main/mario_game",
