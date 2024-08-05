@@ -5,7 +5,7 @@
 
 <p>Esse é meu website pessoal, foi criado com o intuito de me apresentar e mostrar alguns projetos que desenvolvi ao longo da minha carreira. Espero que goste 😀</p>
 
-> Acesse aqui: https://gustavohenrique.site
+> Acesse aqui: https://gustavohenrique.vercel.app
 
 # 💻 Tecnologias
 
