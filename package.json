@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "npx serve@latest ./build",
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "commit": "git-cz"
   },
   "dependencies": {
     "firebase": "^10.4.0",
@@ -30,7 +31,14 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/scrollreveal": "^0.0.7",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.4",
     "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
