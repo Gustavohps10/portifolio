@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ThemeWrapper } from '@/lib/theme-wrapper'
 
 export const metadata: Metadata = {
   title: 'Portifólio',
@@ -20,7 +21,7 @@ export default function RootLayout({
         <meta name="description" content="Web site created..." />
       </head>
       <body>
-        <div id="root">{children}</div>
+        <ThemeWrapper>{children}</ThemeWrapper>
       </body>
     </html>
   )

@@ -2478,6 +2478,11 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.4.tgz#427d5549943a9c6fce808e39ea64dbe60d4047f1"
   integrity sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==
 
+"@sapuris-ui/tokens@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@sapuris-ui/tokens/-/tokens-1.1.0.tgz#98e8ecf83911b977055a47f5be22a3e5762b58c7"
+  integrity sha512-uAgswxaU+4Qm1f7pK+SGso/WrWeBHZaHFgQDQSIoAwovXGlOu0GDj9XJcBm7UzYJOuZMf8yCOGclDrNqUgD3rw==
+
 "@sinclair/typebox@^0.24.1":
   version "0.24.51"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.51.tgz#645f33fe4e02defe26f2f5c0410e1c094eac7f5f"
