@@ -29,7 +29,8 @@
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.0.8",
     "typewriter-effect": "^2.19.0",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.0",
