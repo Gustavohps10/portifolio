@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
 import { ThemeWrapper } from '@/lib/theme-wrapper'
+import { Montserrat } from 'next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 export const metadata: Metadata = {
   title: 'Portifólio',
@@ -12,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className={montserrat.variable}>
       <head>
         <meta charSet="UTF-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />

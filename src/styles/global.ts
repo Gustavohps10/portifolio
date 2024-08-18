@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html{
+        font-family: var(--font-montserrat);
+    }
+
     :focus{
         outline: 0;
     }
@@ -19,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     body, input, textarea, button{
+        font-family: var(--font-montserrat);
         font-weight: 400;
     }
 `
