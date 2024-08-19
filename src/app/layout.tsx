@@ -4,6 +4,7 @@ import { Poppins as FontSans } from 'next/font/google'
 
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Header } from '@/components/header'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
         'min-h-screen bg-background font-sans antialiased',
         fontSans.variable,
       )}
+      suppressHydrationWarning
     >
       <head>
         <meta charSet="UTF-8" />
@@ -43,6 +45,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>

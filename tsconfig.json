@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "./build/types/**/*.ts",
-    "tailwind.config.mts"
+    "tailwind.config.ts"
   ],
   "exclude": [
     "node_modules"
