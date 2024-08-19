@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Poppins as FontSans } from 'next/font/google'
 
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -35,7 +36,16 @@ export default function RootLayout({
         <title>Portifolio</title>
         <meta name="description" content="Web site created..." />
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
