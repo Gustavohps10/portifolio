@@ -1,10 +1,12 @@
+import '@/styles/globals.css'
 import type { Metadata } from 'next'
-import { ThemeWrapper } from '@/lib/theme-wrapper'
-import { Montserrat } from 'next/font/google'
+import { Poppins as FontSans } from 'next/font/google'
 
-const montserrat = Montserrat({
+import { cn } from '@/lib/utils'
+
+const fontSans = FontSans({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-sans',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
@@ -19,7 +21,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br" className={montserrat.variable}>
+    <html
+      lang="pt-br"
+      className={cn(
+        'min-h-screen bg-background font-sans antialiased',
+        fontSans.variable,
+      )}
+    >
       <head>
         <meta charSet="UTF-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -27,9 +35,7 @@ export default function RootLayout({
         <title>Portifolio</title>
         <meta name="description" content="Web site created..." />
       </head>
-      <body>
-        <ThemeWrapper>{children}</ThemeWrapper>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
