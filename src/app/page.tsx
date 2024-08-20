@@ -43,7 +43,10 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="#about" className="mx-auto h-full max-w-[90rem] px-12 py-20">
+      <section
+        id="#about"
+        className="mx-auto h-full min-h-[560px] max-w-[90rem] px-12 py-20"
+      >
         <div className="flex items-center">
           <div className="flex flex-1 items-center justify-center">
             <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />

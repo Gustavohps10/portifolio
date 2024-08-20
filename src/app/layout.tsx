@@ -5,6 +5,7 @@ import { Poppins as FontSans } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -47,6 +48,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
