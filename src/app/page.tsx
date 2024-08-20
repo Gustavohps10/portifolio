@@ -3,8 +3,9 @@ import { DashboardIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import homeImage from '@/assets/images/home-img.svg'
 import skillsImage from '@/assets/images/skills.svg'
+import aboutImage from '@/assets/images/rocket.svg'
 import { CountUpCard } from '@/components/countup-card'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default async function Page() {
   return (
@@ -38,13 +39,43 @@ export default async function Page() {
         </div>
       </section>
 
-      <section id="#skills" className="mx-auto h-full max-w-[90rem] p-12">
-        <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
-          Habilidades
-        </h2>
+      <section id="#about" className="mx-auto h-full max-w-[90rem] px-12 py-20">
+        <div className="flex items-center">
+          <div className="flex flex-1 items-center justify-center">
+            <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
+          </div>
+          <div className="flex flex-1 flex-col justify-center">
+            <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
+              Sobre mim
+            </h2>
+            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
+              voluptates nostrum unde, vero quaerat inventore modi molestiae
+              dicta? Quod sit praesentium numquam sequi alias.
+            </p>
+            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
+              voluptates nostrum unde, vero quaerat inventore modi molestiae
+              dicta? Quod sit praesentium numquam sequi alias.
+            </p>
+            <Button variant="secondary" className="mt-8 max-w-max">
+              Meu Linkedin <FaLinkedin className="ml-2 h-4" />
+            </Button>
+          </div>
+        </div>
+      </section>
 
+      <section
+        id="#skills"
+        className="mx-auto h-full max-w-[90rem] px-12 py-20"
+      >
         <div className="flex items-center">
           <div className="flex flex-1 flex-col justify-center">
+            <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
+              Habilidades
+            </h2>
             <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
