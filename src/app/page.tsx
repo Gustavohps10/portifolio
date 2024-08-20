@@ -2,13 +2,19 @@ import { Button } from '@/components/ui/button'
 import { DashboardIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import homeImage from '@/assets/images/home-img.svg'
+import skillsImage from '@/assets/images/skills.svg'
+import { CountUpCard } from '@/components/countup-card'
+import { FaGithub } from 'react-icons/fa'
 
 export default async function Page() {
   return (
     <>
-      <section className="backgroun h-[95vh] bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950">
+      <section
+        id="#home"
+        className="h-[95vh] bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950"
+      >
         <div className="mx-auto flex h-full max-w-[90rem] items-center">
-          <aside className="flex h-full w-3/5 items-center bg-primary">
+          <aside className="flex h-full w-3/5 items-center bg-primary p-12">
             <div>
               <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-7xl">
                 Oi, eu sou
@@ -26,9 +32,61 @@ export default async function Page() {
               </Button>
             </div>
           </aside>
-          <div className="flex h-full w-2/5 items-center justify-center bg-white dark:bg-zinc-950">
+          <div className="flex h-full w-2/5 items-center justify-center bg-white p-12 dark:bg-zinc-950">
             <Image src={homeImage} width={500} height={500} alt="" />
           </div>
+        </div>
+      </section>
+
+      <section id="#skills" className="mx-auto h-full max-w-[90rem] p-12">
+        <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
+          Habilidades
+        </h2>
+
+        <div className="flex items-center">
+          <div className="flex flex-1 flex-col justify-center">
+            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
+              voluptates nostrum unde, vero quaerat inventore modi molestiae
+              dicta? Quod sit praesentium numquam sequi alias.
+            </p>
+            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
+              voluptates nostrum unde, vero quaerat inventore modi molestiae
+              dicta? Quod sit praesentium numquam sequi alias.
+            </p>
+            <Button variant="secondary" className="mt-8 max-w-max">
+              Meu Github <FaGithub className="ml-2 h-4" />
+            </Button>
+          </div>
+          <div className="flex flex-1 items-center justify-center">
+            <Image
+              src={skillsImage}
+              width={500}
+              height={500}
+              alt="Habilidades"
+            />
+          </div>
+        </div>
+
+        <div className="mt-12 flex items-center justify-center gap-4">
+          <CountUpCard
+            title="Experiência"
+            duration={2}
+            endNumber={new Date().getFullYear() - 2020}
+          >
+            anos imerso no mundo da tecnologia
+          </CountUpCard>
+
+          <CountUpCard title="Contribuições" duration={2} endNumber={1000}>
+            commits no Github
+          </CountUpCard>
+
+          <CountUpCard title="Repertório" duration={2} endNumber={30}>
+            repositórios no Github
+          </CountUpCard>
         </div>
       </section>
     </>
