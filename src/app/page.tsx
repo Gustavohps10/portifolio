@@ -7,6 +7,10 @@ import aboutImage from '@/assets/images/rocket.svg'
 import { CountUpCard } from '@/components/countup-card'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+
 export default async function Page() {
   return (
     <>
@@ -45,7 +49,7 @@ export default async function Page() {
             <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
           </div>
           <div className="flex flex-1 flex-col justify-center">
-            <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
+            <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
               Sobre mim
             </h2>
             <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
@@ -73,7 +77,7 @@ export default async function Page() {
       >
         <div className="flex items-center">
           <div className="flex flex-1 flex-col justify-center">
-            <h2 className='className="scroll-m-20 first:mt-0" max-w-fit border-b pb-2 text-5xl font-bold tracking-tight'>
+            <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
               Habilidades
             </h2>
             <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
@@ -119,6 +123,33 @@ export default async function Page() {
             repositórios no Github
           </CountUpCard>
         </div>
+      </section>
+
+      <section
+        id="#contact"
+        className="mx-auto h-full max-w-[90rem] px-12 py-20"
+      >
+        <h2 className='first:mt-0" mx-auto max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
+          Entre em contato
+        </h2>
+
+        <form className="mx-auto mt-8 w-[600px]">
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" placeholder="Digite seu nome" />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" placeholder="Digite seu email" />
+            </div>
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="message">Mensagem</Label>
+              <Textarea id="message" placeholder="Digite uma mensagem" />
+            </div>
+            <Button>Enviar</Button>
+          </div>
+        </form>
       </section>
     </>
   )
