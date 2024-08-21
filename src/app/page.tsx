@@ -110,7 +110,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-16 flex flex-wrap justify-center gap-4">
+          <div className="mx-auto mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <CountUpCard
               title="Experiência"
               duration={2}
