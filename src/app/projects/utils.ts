@@ -2,7 +2,7 @@ import { database } from '@/services/firebase'
 import { collection, getDocs, orderBy, query } from 'firebase/firestore'
 import { cache } from 'react'
 
-interface ProjectProps {
+export interface ProjectProps {
   id: string
   name: string
   logo?: string

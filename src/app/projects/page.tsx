@@ -1,14 +1,24 @@
-import {
-  Card,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card'
-import Image from 'next/image'
-import { Badge } from '@/components/ui/badge'
-import { RiNextjsFill } from 'react-icons/ri'
+import { ProjectCard } from '@/components/project-card'
 import { getProjects } from './utils'
+
+import { Button } from '@/components/ui/button'
+import {
+  DialogFooter,
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog'
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
+import Image from 'next/image'
 
 export const revalidate = 60 * 60 // 1 hour
 
@@ -28,34 +38,44 @@ export default async function Projects() {
 
         <div className="mt-8 grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
           {projects.map((project) => (
-            <Card
-              key={project.id}
-              className="group mx-auto max-w-[480px] cursor-pointer overflow-hidden transition-all duration-150 ease-linear hover:-translate-y-3"
-            >
-              <CardContent className="p-0">
-                <Image
-                  className="max-h-44 w-full object-cover brightness-90 group-hover:brightness-100"
-                  src={project.image}
-                  width={500}
-                  height={300}
-                  alt="Imagem do projeto"
-                />
-                <div className="p-4">
-                  <CardTitle>{project.name}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </div>
-              </CardContent>
-              <CardFooter className="flex gap-1 px-4">
-                <Badge variant="outline">
-                  <RiNextjsFill className="h-4 w-4" />
-                  <span className="ml-1">Next.js</span>
-                </Badge>
-                <Badge variant="outline">
-                  <RiNextjsFill className="h-4 w-4" />
-                  <span className="ml-1">Next.js</span>
-                </Badge>
-              </CardFooter>
-            </Card>
+            <Dialog key={project.id}>
+              <DialogTrigger asChild>
+                <ProjectCard {...project} />
+              </DialogTrigger>
+              <DialogContent className="max-w-lg md:max-w-2xl lg:max-w-4xl">
+                <Carousel
+                  opts={{
+                    align: 'start',
+                    loop: true,
+                  }}
+                  className="mt-4 w-full"
+                >
+                  <CarouselContent>
+                    {Array.from({ length: 3 }).map((_, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Image
+                            className="max-h-[30rem] object-cover"
+                            src={project.image}
+                            width={1200}
+                            height={720}
+                            alt="Imagem do projeto"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="translate-x-[200%] border-primary" />
+                  <CarouselNext className="-translate-x-[200%] border-primary" />
+                </Carousel>
+                <DialogTitle>{project.name}</DialogTitle>
+                <DialogDescription>{project.longDescription}</DialogDescription>
+
+                <DialogFooter className="sm:justify-start">
+                  <Button>Código fonte</Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </section>

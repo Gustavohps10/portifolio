@@ -2396,6 +2396,26 @@
   resolved "https://registry.yarnpkg.com/@radix-ui/react-context/-/react-context-1.1.0.tgz#6df8d983546cfd1999c8512f3a8ad85a6e7fcee8"
   integrity sha512-OKrckBy+sMEgYM/sMmqmErVn0kZqrHPJze+Ql3DzYsDDp0hl0L62nx/2122/Bvps1qz645jlcu2tD9lrRSdf8A==
 
+"@radix-ui/react-dialog@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-dialog/-/react-dialog-1.1.1.tgz#4906507f7b4ad31e22d7dad69d9330c87c431d44"
+  integrity sha512-zysS+iU4YP3STKNS6USvFVqI4qqx8EpiwmT5TuCApVEBca+eRCbONi4EgzfNSuVnOXvC5UPHHMjs8RXO6DH9Bg==
+  dependencies:
+    "@radix-ui/primitive" "1.1.0"
+    "@radix-ui/react-compose-refs" "1.1.0"
+    "@radix-ui/react-context" "1.1.0"
+    "@radix-ui/react-dismissable-layer" "1.1.0"
+    "@radix-ui/react-focus-guards" "1.1.0"
+    "@radix-ui/react-focus-scope" "1.1.0"
+    "@radix-ui/react-id" "1.1.0"
+    "@radix-ui/react-portal" "1.1.1"
+    "@radix-ui/react-presence" "1.1.0"
+    "@radix-ui/react-primitive" "2.0.0"
+    "@radix-ui/react-slot" "1.1.0"
+    "@radix-ui/react-use-controllable-state" "1.1.0"
+    aria-hidden "^1.1.1"
+    react-remove-scroll "2.5.7"
+
 "@radix-ui/react-direction@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-direction/-/react-direction-1.1.0.tgz#a7d39855f4d077adc2a1922f9c353c5977a09cdc"
@@ -2498,7 +2518,7 @@
     "@radix-ui/react-use-size" "1.1.0"
     "@radix-ui/rect" "1.1.0"
 
-"@radix-ui/react-portal@1.1.1":
+"@radix-ui/react-portal@1.1.1", "@radix-ui/react-portal@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-portal/-/react-portal-1.1.1.tgz#1957f1eb2e1aedfb4a5475bd6867d67b50b1d15f"
   integrity sha512-A3UtLk85UtqhzFqtoC8Q0KvR2GbXF3mtPgACSazajqq6A41mEQgo53iPzY4i6BwDxlIFqWIhiQ2G729n+2aw/g==
@@ -5311,6 +5331,24 @@ electron-to-chromium@^1.5.4:
   version "1.5.11"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.11.tgz#258077f1077a1c72f2925cd5b326c470a7f5adef"
   integrity sha512-R1CccCDYqndR25CaXFd6hp/u9RaaMcftMkphmvuepXr5b1vfLkRml6aWVeBhXJ7rbevHkKEMJtz8XqPf7ffmew==
+
+embla-carousel-react@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-8.2.0.tgz#4214ce960e2691575dff6cebf9c94ac573fdc569"
+  integrity sha512-dWqbmaEBQjeAcy/EKrcAX37beVr0ubXuHPuLZkx27z58V1FIvRbbMb4/c3cLZx0PAv/ofngX2QFrwUB+62SPnw==
+  dependencies:
+    embla-carousel "8.2.0"
+    embla-carousel-reactive-utils "8.2.0"
+
+embla-carousel-reactive-utils@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel-reactive-utils/-/embla-carousel-reactive-utils-8.2.0.tgz#2abe9a01d639641617486a41704525c1de506021"
+  integrity sha512-ZdaPNgMydkPBiDRUv+wRIz3hpZJ3LKrTyz+XWi286qlwPyZFJDjbzPBiXnC3czF9N/nsabSc7LTRvGauUzwKEg==
+
+embla-carousel@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-8.2.0.tgz#b6cee975d4f43f127a77787673477bf618df7610"
+  integrity sha512-rf2GIX8rab9E6ZZN0Uhz05746qu2KrDje9IfFyHzjwxLwhvGjUt6y9+uaY1Sf+B0OPSa3sgas7BE2hWZCtopTA==
 
 emittery@^0.10.2:
   version "0.10.2"
