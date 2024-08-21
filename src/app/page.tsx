@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <>
       <section
-        id="#home"
+        id="home"
         className="h-[95vh] bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950"
       >
         <div className="mx-auto flex h-full max-w-[90rem] items-center">
@@ -43,7 +43,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="#about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
+      <section id="about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
         <div className="flex items-center">
           <div className="flex flex-1 items-center justify-center">
             <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
@@ -71,7 +71,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="#skills" className="bg-[#645de2] text-slate-100">
+      <section id="skills" className="bg-[#645de2] text-slate-100">
         <div className="mx-auto h-full max-w-[90rem] px-12 py-28">
           <div className="flex items-center">
             <div className="flex flex-1 flex-col justify-center">
@@ -125,7 +125,7 @@ export default async function Home() {
       </section>
 
       <section
-        id="#contact"
+        id="contact"
         className="mx-auto h-full max-w-[90rem] px-12 py-40"
       >
         <h2 className='first:mt-0" mx-auto max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>

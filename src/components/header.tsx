@@ -66,24 +66,36 @@ export function Header() {
             <DropdownMenuContent className="absolute -right-3 min-w-72 p-1">
               <DropdownMenuLabel className="text-xl">Menu</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <HomeIcon className="h-5 w-5" /> Home
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <PersonIcon className="h-5 w-5" /> Sobre mim
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <MixIcon className="h-5 w-5" /> Habilidades
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <RiContactsBook3Line className="h-5 w-5" /> Contate-me
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <CiHashtag className="h-5 w-5" /> Social
-              </DropdownMenuItem>
-              <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                <DashboardIcon className="h-5 w-5" /> Projetos
-              </DropdownMenuItem>
+              <Link href="/">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <HomeIcon className="h-5 w-5" /> Home
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/#about">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <PersonIcon className="h-5 w-5" /> Sobre mim
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/#skills">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <MixIcon className="h-5 w-5" /> Habilidades
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/#contact">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <RiContactsBook3Line className="h-5 w-5" /> Contate-me
+                </DropdownMenuItem>
+              </Link>
+              <Link href="#social">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <CiHashtag className="h-5 w-5" /> Social
+                </DropdownMenuItem>
+              </Link>
+              <Link href="/projects">
+                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
+                  <DashboardIcon className="h-5 w-5" /> Projetos
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuSeparator />
               <div className="mt-2 flex flex-wrap gap-1 p-2">
                 <Link
