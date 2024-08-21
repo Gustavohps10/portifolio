@@ -59,17 +59,24 @@ export default async function Home() {
               Sobre mim
             </h2>
             <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
-              voluptates nostrum unde, vero quaerat inventore modi molestiae
-              dicta? Quod sit praesentium numquam sequi alias.
+              Sou um entusiasta de tecnologia com sólido conhecimento em
+              desenvolvimento de software. Minha paixão pelo mundo digital me
+              motiva a enfrentar novos desafios constantemente, por isso,
+              solucionar problemas através das linhas de código é meu principal
+              objetivo.
             </p>
             <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
-              voluptates nostrum unde, vero quaerat inventore modi molestiae
-              dicta? Quod sit praesentium numquam sequi alias.
+              Atualmente, estou focado no desenvolvimento de soluções tanto
+              Front-end quanto Back-end, garantindo uma experiência de usuário
+              funcional, intuitiva e performática.
             </p>
+
+            <h3 className="mt-6 font-semibold">Hobbies:</h3>
+            <ul className="max-w-[560px] list-disc leading-7 text-slate-400 dark:text-slate-300">
+              <li>⚽ Esportes, principalmente futebol</li>
+              <li>🎮 Fanático pelo mundo dos games</li>
+              <li>🎸 Ouvir uma boa música</li>
+            </ul>
             <Button variant="secondary" className="mt-8 max-w-max">
               Meu Linkedin <FaLinkedin className="ml-2 h-4" />
             </Button>
