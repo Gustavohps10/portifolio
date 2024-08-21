@@ -16,11 +16,11 @@ export default async function Home() {
     <>
       <section
         id="home"
-        className="h-[95vh] bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950"
+        className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950 lg:h-[95vh]"
       >
-        <div className="mx-auto flex h-full max-w-[90rem] items-center">
-          <aside className="flex h-full w-3/5 items-center bg-primary px-12 py-28">
-            <div>
+        <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
+          <aside className="flex h-full items-center bg-primary px-12 py-28 sm:w-full lg:w-3/5">
+            <div className="sm:mx-auto lg:m-0">
               <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-7xl">
                 Oi, eu sou
                 <br />
@@ -37,18 +37,24 @@ export default async function Home() {
               </Button>
             </div>
           </aside>
-          <div className="flex h-full w-2/5 items-center justify-center bg-white p-12 dark:bg-zinc-950">
-            <Image src={homeImage} width={500} height={500} alt="" />
+          <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-zinc-950 sm:w-full lg:w-2/5">
+            <Image
+              src={homeImage}
+              width={500}
+              height={500}
+              alt=""
+              className="max-h-64 lg:max-h-80"
+            />
           </div>
         </div>
       </section>
 
       <section id="about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
-        <div className="flex items-center">
-          <div className="flex flex-1 items-center justify-center">
+        <div className="flex flex-col-reverse flex-wrap items-center justify-center gap-16 lg:flex-row">
+          <div className="flex items-center justify-center lg:flex-1">
             <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
           </div>
-          <div className="flex flex-1 flex-col justify-center">
+          <div className="flex flex-col justify-center lg:w-auto lg:flex-1">
             <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
               Sobre mim
             </h2>
@@ -73,8 +79,8 @@ export default async function Home() {
 
       <section id="skills" className="bg-[#645de2] text-slate-100">
         <div className="mx-auto h-full max-w-[90rem] px-12 py-28">
-          <div className="flex items-center">
-            <div className="flex flex-1 flex-col justify-center">
+          <div className="flex flex-wrap items-center justify-center gap-16">
+            <div className="flex flex-col justify-center lg:flex-1">
               <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-slate-200 pb-2 text-5xl font-bold tracking-tight'>
                 Habilidades
               </h2>
@@ -94,7 +100,7 @@ export default async function Home() {
                 Meu Github <FaGithub className="ml-2 h-4" />
               </Button>
             </div>
-            <div className="flex flex-1 items-center justify-center">
+            <div className="flex items-center justify-center lg:flex-1">
               <Image
                 src={skillsImage}
                 width={500}
@@ -104,7 +110,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <div className="mt-16 flex items-center justify-center gap-4">
+          <div className="mt-16 flex flex-wrap justify-center gap-4">
             <CountUpCard
               title="Experiência"
               duration={2}
