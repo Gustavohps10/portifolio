@@ -3,7 +3,7 @@ import { DashboardIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import homeImage from '@/assets/images/home-img.svg'
 import skillsImage from '@/assets/images/skills.svg'
-import aboutImage from '@/assets/images/rocket.svg'
+import aboutImage from '@/assets/images/aboutme.svg'
 import { CountUpCard } from '@/components/countup-card'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
