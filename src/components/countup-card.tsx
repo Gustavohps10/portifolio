@@ -26,7 +26,7 @@ export function CountUpCard({
   duration,
 }: CountUpCardProps) {
   return (
-    <Card className="w-[400px] border-zinc-400">
+    <Card className="w-[400px] border-slate-200 bg-transparent text-slate-200">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
@@ -36,7 +36,7 @@ export function CountUpCard({
           <span className="text-3xl font-bold">
             +<CountUp start={startNumber} end={endNumber} duration={duration} />
           </span>
-          <div>{children}</div>
+          <div className="text-slate-300">{children}</div>
         </div>
       </CardContent>
     </Card>

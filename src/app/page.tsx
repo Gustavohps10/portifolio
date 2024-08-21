@@ -19,7 +19,7 @@ export default async function Page() {
         className="h-[95vh] bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950"
       >
         <div className="mx-auto flex h-full max-w-[90rem] items-center">
-          <aside className="flex h-full w-3/5 items-center bg-primary p-12">
+          <aside className="flex h-full w-3/5 items-center bg-primary px-12 py-28">
             <div>
               <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-7xl">
                 Oi, eu sou
@@ -43,10 +43,7 @@ export default async function Page() {
         </div>
       </section>
 
-      <section
-        id="#about"
-        className="mx-auto h-full min-h-[560px] max-w-[90rem] px-12 py-20"
-      >
+      <section id="#about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
         <div className="flex items-center">
           <div className="flex flex-1 items-center justify-center">
             <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
@@ -74,69 +71,68 @@ export default async function Page() {
         </div>
       </section>
 
-      <section
-        id="#skills"
-        className="mx-auto h-full max-w-[90rem] px-12 py-20"
-      >
-        <div className="flex items-center">
-          <div className="flex flex-1 flex-col justify-center">
-            <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
-              Habilidades
-            </h2>
-            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
-              voluptates nostrum unde, vero quaerat inventore modi molestiae
-              dicta? Quod sit praesentium numquam sequi alias.
-            </p>
-            <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem ipsum necessitatibus voluptatibus omnis vel autem,
-              voluptates nostrum unde, vero quaerat inventore modi molestiae
-              dicta? Quod sit praesentium numquam sequi alias.
-            </p>
-            <Button variant="secondary" className="mt-8 max-w-max">
-              Meu Github <FaGithub className="ml-2 h-4" />
-            </Button>
+      <section id="#skills" className="bg-[#645de2] text-slate-100">
+        <div className="mx-auto h-full max-w-[90rem] px-12 py-28">
+          <div className="flex items-center">
+            <div className="flex flex-1 flex-col justify-center">
+              <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-slate-200 pb-2 text-5xl font-bold tracking-tight'>
+                Habilidades
+              </h2>
+              <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem ipsum necessitatibus voluptatibus omnis vel
+                autem, voluptates nostrum unde, vero quaerat inventore modi
+                molestiae dicta? Quod sit praesentium numquam sequi alias.
+              </p>
+              <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem ipsum necessitatibus voluptatibus omnis vel
+                autem, voluptates nostrum unde, vero quaerat inventore modi
+                molestiae dicta? Quod sit praesentium numquam sequi alias.
+              </p>
+              <Button variant="secondary" className="mt-8 max-w-max">
+                Meu Github <FaGithub className="ml-2 h-4" />
+              </Button>
+            </div>
+            <div className="flex flex-1 items-center justify-center">
+              <Image
+                src={skillsImage}
+                width={500}
+                height={500}
+                alt="Habilidades"
+              />
+            </div>
           </div>
-          <div className="flex flex-1 items-center justify-center">
-            <Image
-              src={skillsImage}
-              width={500}
-              height={500}
-              alt="Habilidades"
-            />
+
+          <div className="mt-16 flex items-center justify-center gap-4">
+            <CountUpCard
+              title="Experiência"
+              duration={2}
+              endNumber={new Date().getFullYear() - 2020}
+            >
+              anos imerso no mundo da tecnologia
+            </CountUpCard>
+
+            <CountUpCard title="Contribuições" duration={2} endNumber={1000}>
+              commits no Github
+            </CountUpCard>
+
+            <CountUpCard title="Repertório" duration={2} endNumber={30}>
+              repositórios no Github
+            </CountUpCard>
           </div>
-        </div>
-
-        <div className="mt-12 flex items-center justify-center gap-4">
-          <CountUpCard
-            title="Experiência"
-            duration={2}
-            endNumber={new Date().getFullYear() - 2020}
-          >
-            anos imerso no mundo da tecnologia
-          </CountUpCard>
-
-          <CountUpCard title="Contribuições" duration={2} endNumber={1000}>
-            commits no Github
-          </CountUpCard>
-
-          <CountUpCard title="Repertório" duration={2} endNumber={30}>
-            repositórios no Github
-          </CountUpCard>
         </div>
       </section>
 
       <section
         id="#contact"
-        className="mx-auto h-full max-w-[90rem] px-12 py-20"
+        className="mx-auto h-full max-w-[90rem] px-12 py-40"
       >
         <h2 className='first:mt-0" mx-auto max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
           Entre em contato
         </h2>
 
-        <form className="mx-auto mt-8 w-[600px]">
+        <form className="mx-auto mt-8 max-w-[600px]">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Name</Label>

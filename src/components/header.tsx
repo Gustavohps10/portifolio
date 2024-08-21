@@ -30,7 +30,7 @@ import { Button } from './ui/button'
 export function Header() {
   return (
     <header className="fixed mt-4 w-full px-4 py-2">
-      <div className="mx-auto flex max-w-[90rem] items-center justify-between">
+      <div className="mx-auto flex max-w-[94rem] items-center justify-between">
         <Link href="/" className="h-4">
           <svg
             className="fill-foreground"
@@ -55,7 +55,7 @@ export function Header() {
             </g>
           </svg>
         </Link>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1">
           <ToggleTheme />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
