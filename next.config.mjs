@@ -1,9 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Outputs a Single-Page Application (SPA).
   distDir: './build', // Changes the build output directory to `./dist`.
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'user-images.githubusercontent.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 }
 

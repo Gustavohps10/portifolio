@@ -6,11 +6,15 @@ import {
   CardFooter,
 } from '@/components/ui/card'
 import Image from 'next/image'
-import fakeProjectImage from '@/assets/images/fake.png'
 import { Badge } from '@/components/ui/badge'
 import { RiNextjsFill } from 'react-icons/ri'
+import { getProjects } from './utils'
+
+export const revalidate = 60 * 60 // 1 hour
 
 export default async function Projects() {
+  const projects = await getProjects()
+
   return (
     <>
       <section className="mx-auto h-full max-w-[90rem] px-12 py-40">
@@ -23,24 +27,22 @@ export default async function Projects() {
         </h3>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
-          {Array.from({ length: 12 }).map((project, index) => (
+          {projects.map((project) => (
             <Card
-              key={index}
+              key={project.id}
               className="group mx-auto max-w-[480px] cursor-pointer overflow-hidden transition-all duration-150 ease-linear hover:-translate-y-3"
             >
               <CardContent className="p-0">
                 <Image
                   className="max-h-44 w-full object-cover brightness-90 group-hover:brightness-100"
-                  src={fakeProjectImage}
+                  src={project.image}
                   width={500}
+                  height={300}
                   alt="Imagem do projeto"
                 />
                 <div className="p-4">
-                  <CardTitle>Portifólio</CardTitle>
-                  <CardDescription>
-                    Feito com o propósito de me apresentar e mostrar alguns dos
-                    projetos que ja desenvolvi.
-                  </CardDescription>
+                  <CardTitle>{project.name}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
                 </div>
               </CardContent>
               <CardFooter className="flex gap-1 px-4">
