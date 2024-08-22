@@ -177,7 +177,11 @@ export default async function Home() {
           Entre em contato
         </h2>
 
-        <form className="mx-auto mt-8 max-w-[600px]">
+        <form
+          className="mx-auto mt-8 max-w-[600px]"
+          action="https://formsubmit.co/gustavoh.santos735@gmail.com"
+          method="POST"
+        >
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Name</Label>
@@ -191,7 +195,7 @@ export default async function Home() {
               <Label htmlFor="message">Mensagem</Label>
               <Textarea id="message" placeholder="Digite uma mensagem" />
             </div>
-            <Button>Enviar</Button>
+            <Button type="submit">Enviar</Button>
           </div>
         </form>
       </section>
