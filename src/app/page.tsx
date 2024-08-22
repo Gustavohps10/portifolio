@@ -84,25 +84,40 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="skills" className="bg-[#645de2] text-slate-100">
+      <section id="skills" className="bg-[#0d102a] text-slate-100">
         <div className="mx-auto h-full max-w-[90rem] px-12 py-28">
           <div className="flex flex-wrap items-center justify-center gap-16">
             <div className="flex flex-col justify-center lg:flex-1">
               <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-slate-200 pb-2 text-5xl font-bold tracking-tight'>
                 Habilidades
               </h2>
-              <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsum necessitatibus voluptatibus omnis vel
-                autem, voluptates nostrum unde, vero quaerat inventore modi
-                molestiae dicta? Quod sit praesentium numquam sequi alias.
+              <p className="max-w-[560px] leading-7 text-slate-200 [&:not(:first-child)]:mt-6">
+                Minha jornada no desenvolvimento web começou com a base sólida
+                de <span className="text-[#8b86ee]">HTML</span>,{' '}
+                <span className="text-[#8b86ee]">CSS</span> e{' '}
+                <span className="text-[#8b86ee]">Vanilla JavaScript</span>. Com
+                o tempo, mergulhei no{' '}
+                <span className="text-[#8b86ee]">PHP</span>, aprofundando meu
+                conhecimento em desenvolvimento backend. Atualmente, sou capaz
+                de construir aplicações completas utilizando{' '}
+                <span className="text-[#8b86ee]">Node.js</span>, aplicando as
+                melhores práticas com{' '}
+                <span className="text-[#8b86ee]">React.js</span>,{' '}
+                <span className="text-[#8b86ee]">React Native</span> e{' '}
+                <span className="text-[#8b86ee]">Next.js</span>, além de
+                desenvolver e consumir minhas próprias
+                <span className="text-[#8b86ee]"> APIs REST</span>.
               </p>
-              <p className="max-w-[560px] leading-7 [&:not(:first-child)]:mt-6">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Exercitationem ipsum necessitatibus voluptatibus omnis vel
-                autem, voluptates nostrum unde, vero quaerat inventore modi
-                molestiae dicta? Quod sit praesentium numquam sequi alias.
-              </p>
+
+              <h3 className="mt-6 font-semibold">Diferencial:</h3>
+              <ul className="max-w-[560px] list-disc leading-7 text-slate-400 dark:text-slate-300">
+                <li>✨ Clean Code, SOLID, Design Patterns</li>
+                <li>🤳 Layout elegante e responsivo</li>
+                <li>
+                  🤝 Facilidade em aprender, ensinar e trabalhar em equipe
+                </li>
+              </ul>
+
               <Button variant="secondary" className="mt-8 max-w-max">
                 Meu Github <FaGithub className="ml-2 h-4" />
               </Button>
