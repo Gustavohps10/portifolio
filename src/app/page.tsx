@@ -16,7 +16,7 @@ export default async function Home() {
     <>
       <section
         id="home"
-        className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-zinc-950 dark:to-zinc-950 lg:h-[95vh]"
+        className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-gray-950 dark:to-gray-950 lg:h-[95vh]"
       >
         <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
           <aside className="flex h-full items-center bg-primary px-12 py-28 sm:w-full lg:w-3/5">
@@ -37,7 +37,7 @@ export default async function Home() {
               </Button>
             </div>
           </aside>
-          <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-zinc-950 sm:w-full lg:w-2/5">
+          <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-gray-950 sm:w-full lg:w-2/5">
             <Image
               src={homeImage}
               width={500}
