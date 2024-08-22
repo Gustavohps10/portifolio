@@ -1,4 +1,5 @@
-import { Button } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
+
 import { DashboardIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import homeImage from '@/assets/images/home-img.svg'
@@ -10,6 +11,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import Link from 'next/link'
 
 export default async function Home() {
   return (
@@ -32,9 +34,12 @@ export default async function Home() {
               <h3 className="my-6 scroll-m-20 text-2xl tracking-tight text-white">
                 Meus principais hobbies são: jogar video game 🎮
               </h3>
-              <Button variant="outline" className="mt-10">
+              <Link
+                href="/projects"
+                className={buttonVariants({ variant: 'outline' })}
+              >
                 Meus Projetos <DashboardIcon className="ml-2 h-4" />
-              </Button>
+              </Link>
             </div>
           </aside>
           <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-gray-950 sm:w-full lg:w-2/5">
@@ -77,8 +82,14 @@ export default async function Home() {
               <li>🎮 Fanático pelo mundo dos games</li>
               <li>🎸 Ouvir uma boa música</li>
             </ul>
-            <Button variant="secondary" className="mt-8 max-w-max">
-              Meu Linkedin <FaLinkedin className="ml-2 h-4" />
+            <Button variant="secondary" className="mt-8" asChild>
+              <Link
+                href="https://www.linkedin.com/in/guhenriquesantos/"
+                target="_blank"
+                className="max-w-max"
+              >
+                Meu Linkedin <FaLinkedin className="ml-2 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -118,8 +129,14 @@ export default async function Home() {
                 </li>
               </ul>
 
-              <Button variant="secondary" className="mt-8 max-w-max">
-                Meu Github <FaGithub className="ml-2 h-4" />
+              <Button variant="secondary" className="mt-8" asChild>
+                <Link
+                  href="https://github.com/gustavohps10"
+                  target="_blank"
+                  className="max-w-max"
+                >
+                  Meu Github <FaGithub className="ml-2 h-4" />
+                </Link>
               </Button>
             </div>
             <div className="flex items-center justify-center lg:flex-1">
