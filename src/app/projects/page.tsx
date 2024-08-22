@@ -19,8 +19,14 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 export const revalidate = 60 * 60 // 1 hour
+
+export const metadata: Metadata = {
+  title: 'Projetos - Gustavo Henrique',
+  description: 'Listagem de projetos',
+}
 
 export default async function Projects() {
   const projects = await getProjects()

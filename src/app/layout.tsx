@@ -14,8 +14,8 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Portifólio',
-  description: 'Portifólio',
+  title: 'Portifólio - Gustavo Henrique',
+  description: 'Meu website pessoal',
 }
 
 export default function RootLayout({
@@ -34,10 +34,6 @@ export default function RootLayout({
     >
       <head>
         <meta charSet="UTF-8" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Portifolio</title>
-        <meta name="description" content="Web site created..." />
       </head>
       <body>
         <ThemeProvider
