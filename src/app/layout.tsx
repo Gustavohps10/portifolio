@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
       </head>
-      <body>
+      <body className="bg-gray-50 dark:bg-gray-950">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
