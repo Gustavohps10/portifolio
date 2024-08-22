@@ -28,12 +28,10 @@ export default async function Home() {
                 <br />
                 <span className="text-[#2e2b46]">Gustavo Henrique</span>
               </h1>
-              <h2 className="mt-4 scroll-m-20 pb-2 text-4xl font-semibold tracking-tight text-white first:mt-0">
+              <h2 className="mb-12 mt-4 scroll-m-20 pb-2 text-4xl font-semibold tracking-tight text-white first:mt-0">
                 Desenvolvedor Full Stack
               </h2>
-              <h3 className="my-6 scroll-m-20 text-2xl tracking-tight text-white">
-                Meus principais hobbies são: jogar video game 🎮
-              </h3>
+
               <Link
                 href="/projects"
                 className={buttonVariants({ variant: 'outline' })}
