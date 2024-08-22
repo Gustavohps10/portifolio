@@ -39,31 +39,31 @@ export default async function Home() {
               <div className="mb-12 mt-4 flex items-center gap-4">
                 <Badge
                   variant="outline"
-                  className="bg-transparent text-gray-50"
+                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
                 >
                   <TbBrandNodejs className="mr-2 h-5 w-5" /> Node.js
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="bg-transparent text-gray-50"
+                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
                 >
                   <TbBrandPhp className="mr-2 h-5 w-5" /> PHP
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="bg-transparent text-gray-50"
+                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
                 >
                   <TbBrandReact className="mr-2 h-5 w-5" /> React
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="bg-transparent text-gray-50"
+                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
                 >
                   <RiNextjsLine className="mr-2 h-5 w-5" /> Next.js
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="bg-transparent text-gray-50"
+                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
                 >
                   <TbApi className="mr-2 h-5 w-5" /> REST
                 </Badge>
@@ -71,8 +71,7 @@ export default async function Home() {
 
               <Button
                 asChild
-                variant="outline"
-                className="duration-50 bg-gray-100 text-[#6b67b0] transition-all ease-in hover:text-[#2e2b46]"
+                className="duration-50 bg-gray-100 text-[#6b67b0] shadow-md transition-all ease-in hover:bg-gray-100 hover:text-[#2e2b46]"
               >
                 <Link href="/projects" className="">
                   Meus Projetos <DashboardIcon className="ml-2 h-4" />
