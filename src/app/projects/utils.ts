@@ -15,6 +15,7 @@ export interface ProjectProps {
     light: Array<string>
     dark: Array<string>
   }
+  tags: string[]
 }
 
 export const getProjects = cache(async () => {
