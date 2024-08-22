@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 
 import { DashboardIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
@@ -6,12 +6,15 @@ import homeImage from '@/assets/images/home-img.svg'
 import skillsImage from '@/assets/images/skills.svg'
 import aboutImage from '@/assets/images/aboutme.svg'
 import { CountUpCard } from '@/components/countup-card'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaNodeJs, FaPhp, FaReact } from 'react-icons/fa'
+import { TbApi, TbBrandNodejs, TbBrandPhp, TbBrandReact } from 'react-icons/tb'
 
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
+import { RiNextjsLine } from 'react-icons/ri'
 
 export default async function Home() {
   return (
@@ -21,23 +24,60 @@ export default async function Home() {
         className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-gray-950 dark:to-gray-950 lg:h-[95vh]"
       >
         <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
-          <aside className="flex h-full items-center bg-primary px-12 py-28 sm:w-full lg:w-3/5">
+          <aside className="flex h-full w-full items-center bg-primary px-12 py-28 lg:w-3/5">
             <div className="sm:mx-auto lg:m-0">
-              <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-7xl">
+              <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-6xl">
                 Oi, eu sou
-                <br />
-                <span className="text-[#2e2b46]">Gustavo Henrique</span>
               </h1>
-              <h2 className="mb-12 mt-4 scroll-m-20 pb-2 text-4xl font-semibold tracking-tight text-white first:mt-0">
+              <h2 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-[#2e2b46] lg:text-7xl">
+                Gustavo Henrique
+              </h2>
+              <h2 className="mt-2 scroll-m-20 pb-2 text-4xl font-normal tracking-tight text-gray-100 first:mt-0">
                 Desenvolvedor Full Stack
               </h2>
 
-              <Link
-                href="/projects"
-                className={buttonVariants({ variant: 'outline' })}
+              <div className="mb-12 mt-4 flex items-center gap-4">
+                <Badge
+                  variant="outline"
+                  className="bg-transparent text-gray-50"
+                >
+                  <TbBrandNodejs className="mr-2 h-5 w-5" /> Node.js
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-transparent text-gray-50"
+                >
+                  <TbBrandPhp className="mr-2 h-5 w-5" /> PHP
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-transparent text-gray-50"
+                >
+                  <TbBrandReact className="mr-2 h-5 w-5" /> React
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-transparent text-gray-50"
+                >
+                  <RiNextjsLine className="mr-2 h-5 w-5" /> Next.js
+                </Badge>
+                <Badge
+                  variant="outline"
+                  className="bg-transparent text-gray-50"
+                >
+                  <TbApi className="mr-2 h-5 w-5" /> REST
+                </Badge>
+              </div>
+
+              <Button
+                asChild
+                variant="outline"
+                className="duration-50 bg-gray-100 text-[#6b67b0] transition-all ease-in hover:text-[#2e2b46]"
               >
-                Meus Projetos <DashboardIcon className="ml-2 h-4" />
-              </Link>
+                <Link href="/projects" className="">
+                  Meus Projetos <DashboardIcon className="ml-2 h-4" />
+                </Link>
+              </Button>
             </div>
           </aside>
           <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-gray-950 sm:w-full lg:w-2/5">
