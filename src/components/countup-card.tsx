@@ -37,6 +37,7 @@ export function CountUpCard({
             +
             <CountUp
               enableScrollSpy
+              scrollSpyOnce
               start={startNumber}
               end={endNumber}
               duration={duration}
