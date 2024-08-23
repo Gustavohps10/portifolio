@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/carousel'
 import Image from 'next/image'
 import { Metadata } from 'next'
+import { ShieldsBox } from '@/components/shields-box'
 
 export const revalidate = 60 * 60 // 1 hour
 
@@ -75,6 +76,8 @@ export default async function Projects() {
                   <CarouselNext className="-translate-x-[200%] border-primary" />
                 </Carousel>
                 <DialogTitle>{project.name}</DialogTitle>
+                <ShieldsBox shields={project.shields} />
+
                 <DialogDescription>{project.longDescription}</DialogDescription>
 
                 <DialogFooter className="sm:justify-start">
