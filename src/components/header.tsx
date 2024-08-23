@@ -29,7 +29,7 @@ import { Button } from './ui/button'
 
 export function Header() {
   return (
-    <header className="fixed w-full bg-gray-50 px-4 py-2 shadow-md dark:bg-gray-950 md:mt-4 md:bg-transparent md:shadow-none md:dark:bg-transparent">
+    <header className="fixed z-50 w-full bg-gray-50 px-4 py-2 shadow-md dark:bg-gray-950 md:mt-4 md:bg-transparent md:shadow-none md:dark:bg-transparent">
       <div className="mx-auto flex max-w-[94rem] items-center justify-between">
         <Link href="/" className="h-4">
           <svg
