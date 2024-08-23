@@ -6,7 +6,7 @@ import homeImage from '@/assets/images/home-img.svg'
 import skillsImage from '@/assets/images/skills.svg'
 import aboutImage from '@/assets/images/aboutme.svg'
 import { CountUpCard } from '@/components/countup-card'
-import { FaGithub, FaLinkedin, FaNodeJs, FaPhp, FaReact } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { TbApi, TbBrandNodejs, TbBrandPhp, TbBrandReact } from 'react-icons/tb'
 
 import { Label } from '@/components/ui/label'
@@ -15,8 +15,16 @@ import { Textarea } from '@/components/ui/textarea'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { RiNextjsLine } from 'react-icons/ri'
+import { Motion } from '@/components/motion'
 
 export default async function Home() {
+  const badgeAnimations = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    exit: { scale: 0, opacity: 0 },
+    transition: { type: 'spring', stiffness: 900, damping: 40 },
+  }
+
   return (
     <>
       <section
@@ -26,47 +34,81 @@ export default async function Home() {
         <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
           <aside className="flex h-full w-full items-center bg-primary px-12 py-28 lg:w-3/5">
             <div className="sm:mx-auto lg:m-0">
-              <h1 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-6xl">
+              <Motion
+                as="h1"
+                className="scroll-m-20 text-5xl font-extrabold tracking-tight text-white lg:text-6xl"
+                initial={{ x: -10, opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                animate={{ x: 0 }}
+                transition={{ ease: 'easeOut', duration: 0.1 }}
+              >
                 Oi, eu sou
-              </h1>
-              <h2 className="scroll-m-20 text-5xl font-extrabold tracking-tight text-[#2e2b46] lg:text-7xl">
+              </Motion>
+
+              <Motion
+                as="h2"
+                initial={{ x: -20, opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                animate={{ x: 0 }}
+                transition={{ ease: 'easeOut', duration: 0.2 }}
+                className="scroll-m-20 text-5xl font-extrabold tracking-tight text-[#2e2b46] lg:text-7xl"
+              >
                 Gustavo Henrique
-              </h2>
-              <h2 className="mt-2 scroll-m-20 pb-2 text-4xl font-normal tracking-tight text-gray-100 first:mt-0">
+              </Motion>
+
+              <Motion
+                as="h2"
+                initial={{ x: -30, opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                animate={{ x: 0 }}
+                transition={{ ease: 'easeOut', duration: 0.2 }}
+                className="mt-2 scroll-m-20 pb-2 text-4xl font-normal tracking-tight text-gray-100 first:mt-0"
+              >
                 Desenvolvedor Full Stack
-              </h2>
+              </Motion>
 
               <div className="mb-12 mt-4 flex items-center gap-4">
-                <Badge
-                  variant="outline"
-                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
-                >
-                  <TbBrandNodejs className="mr-2 h-5 w-5" /> Node.js
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
-                >
-                  <TbBrandPhp className="mr-2 h-5 w-5" /> PHP
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
-                >
-                  <TbBrandReact className="mr-2 h-5 w-5" /> React
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
-                >
-                  <RiNextjsLine className="mr-2 h-5 w-5" /> Next.js
-                </Badge>
-                <Badge
-                  variant="outline"
-                  className="border-gray-50 bg-transparent text-gray-50 shadow-md"
-                >
-                  <TbApi className="mr-2 h-5 w-5" /> REST
-                </Badge>
+                <Motion {...badgeAnimations}>
+                  <Badge
+                    variant="outline"
+                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                  >
+                    <TbBrandNodejs className="mr-2 h-5 w-5" /> Node.js
+                  </Badge>
+                </Motion>
+
+                <Motion {...badgeAnimations}>
+                  <Badge
+                    variant="outline"
+                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                  >
+                    <TbBrandPhp className="mr-2 h-5 w-5" /> PHP
+                  </Badge>
+                </Motion>
+                <Motion {...badgeAnimations}>
+                  <Badge
+                    variant="outline"
+                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                  >
+                    <TbBrandReact className="mr-2 h-5 w-5" /> React
+                  </Badge>
+                </Motion>
+                <Motion {...badgeAnimations}>
+                  <Badge
+                    variant="outline"
+                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                  >
+                    <RiNextjsLine className="mr-2 h-5 w-5" /> Next.js
+                  </Badge>
+                </Motion>
+                <Motion {...badgeAnimations}>
+                  <Badge
+                    variant="outline"
+                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                  >
+                    <TbApi className="mr-2 h-5 w-5" /> REST
+                  </Badge>
+                </Motion>
               </div>
 
               <Button
@@ -80,13 +122,20 @@ export default async function Home() {
             </div>
           </aside>
           <div className="flex h-full items-center justify-center bg-white p-12 dark:bg-gray-950 sm:w-full lg:w-2/5">
-            <Image
-              src={homeImage}
-              width={500}
-              height={500}
-              alt=""
-              className="max-h-64 lg:max-h-80"
-            />
+            <Motion
+              initial={{ x: 30, opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              animate={{ x: 0 }}
+              transition={{ ease: 'easeOut', duration: 0.2 }}
+            >
+              <Image
+                src={homeImage}
+                width={500}
+                height={500}
+                alt=""
+                className="max-h-64 lg:max-h-80"
+              />
+            </Motion>
           </div>
         </div>
       </section>
