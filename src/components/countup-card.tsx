@@ -34,7 +34,13 @@ export function CountUpCard({
       <CardContent>
         <div>
           <span className="text-3xl font-bold">
-            +<CountUp start={startNumber} end={endNumber} duration={duration} />
+            +
+            <CountUp
+              enableScrollSpy
+              start={startNumber}
+              end={endNumber}
+              duration={duration}
+            />
           </span>
           <div className="text-slate-300">{children}</div>
         </div>

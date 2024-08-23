@@ -143,7 +143,23 @@ export default async function Home() {
       <section id="about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
         <div className="flex flex-col-reverse flex-wrap items-center justify-center gap-16 lg:flex-row">
           <div className="flex items-center justify-center lg:flex-1">
-            <Image src={aboutImage} width={500} height={500} alt="Sobre mim" />
+            <Motion
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.2 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 0.5 },
+              }}
+            >
+              <Image
+                src={aboutImage}
+                width={500}
+                height={500}
+                alt="Sobre mim"
+              />
+            </Motion>
           </div>
           <div className="flex flex-col justify-center lg:w-auto lg:flex-1">
             <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
@@ -226,12 +242,23 @@ export default async function Home() {
               </Button>
             </div>
             <div className="flex items-center justify-center lg:flex-1">
-              <Image
-                src={skillsImage}
-                width={500}
-                height={500}
-                alt="Habilidades"
-              />
+              <Motion
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.2 }}
+                variants={{
+                  visible: { opacity: 1, scale: 1 },
+                  hidden: { opacity: 0, scale: 0.5 },
+                }}
+              >
+                <Image
+                  src={skillsImage}
+                  width={500}
+                  height={500}
+                  alt="Habilidades"
+                />
+              </Motion>
             </div>
           </div>
 
