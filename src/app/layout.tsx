@@ -6,6 +6,8 @@ import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
+import { MenuContent } from '@/components/menu-content'
+import { Sidebar } from '@/components/sidebar'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -42,9 +44,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Footer />
+          <Sidebar>
+            <MenuContent />
+          </Sidebar>
+
+          <div className="relative md:ml-[240px]">
+            <Header />
+            {children}
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

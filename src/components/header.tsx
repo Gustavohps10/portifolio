@@ -1,37 +1,22 @@
 import Link from 'next/link'
 import { ToggleTheme } from './toggle-theme'
-import {
-  HamburgerMenuIcon,
-  HomeIcon,
-  PersonIcon,
-  MixIcon,
-  DashboardIcon,
-} from '@radix-ui/react-icons'
-import { CiHashtag } from 'react-icons/ci'
-import { RiContactsBook3Line } from 'react-icons/ri'
-import {
-  FaDiscord,
-  FaGithub,
-  FaLinkedin,
-  FaReddit,
-  FaSteam,
-} from 'react-icons/fa'
+import { HamburgerMenuIcon } from '@radix-ui/react-icons'
+
+import { Button } from './ui/button'
+import { MenuContent } from './menu-content'
 
 import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuItem,
-} from '@/components/ui/dropdown-menu'
-import { Button } from './ui/button'
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 
 export function Header() {
   return (
-    <header className="fixed z-50 w-full bg-gray-50 px-4 py-2 shadow-md dark:bg-gray-950 md:mt-4 md:bg-transparent md:shadow-none md:dark:bg-transparent">
-      <div className="mx-auto flex max-w-[94rem] items-center justify-between">
-        <Link href="/" className="h-4">
+    <header className="fixed left-0 z-50 w-full bg-gray-50 px-4 py-2 shadow-md dark:bg-gray-950 md:mt-4 md:bg-transparent md:pl-[calc(1rem+240px)] md:shadow-none md:dark:bg-transparent">
+      <div className="mx-auto flex max-w-[94rem] flex-row items-center justify-between md:flex-row-reverse">
+        <Link href="/" className="h-4 md:hidden">
           <svg
             className="fill-foreground"
             width="100%"
@@ -57,94 +42,18 @@ export function Header() {
         </Link>
         <div className="flex items-center gap-1">
           <ToggleTheme />
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
                 <HamburgerMenuIcon className="h-6 w-6 cursor-pointer text-primary" />
               </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="absolute -right-3 min-w-72 p-1">
-              <DropdownMenuLabel className="text-xl">Menu</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <Link href="/">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <HomeIcon className="h-5 w-5" /> Home
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/#about">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <PersonIcon className="h-5 w-5" /> Sobre mim
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/#skills">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <MixIcon className="h-5 w-5" /> Habilidades
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/#contact">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <RiContactsBook3Line className="h-5 w-5" /> Contate-me
-                </DropdownMenuItem>
-              </Link>
-              <Link href="#social">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <CiHashtag className="h-5 w-5" /> Social
-                </DropdownMenuItem>
-              </Link>
-              <Link href="/projects">
-                <DropdownMenuItem className="flex cursor-pointer items-center gap-4 text-lg">
-                  <DashboardIcon className="h-5 w-5" /> Projetos
-                </DropdownMenuItem>
-              </Link>
-              <DropdownMenuSeparator />
-              <div className="mt-2 flex flex-wrap gap-1 p-2">
-                <Link
-                  href="https://github.com/Gustavohps10"
-                  target="_blank"
-                  className="flex max-w-max items-center overflow-hidden rounded-sm"
-                >
-                  <FaGithub className="h-5 w-5 bg-primary p-1 text-white" />
-                  <span className="bg-secondary px-2 text-sm">Github</span>
-                </Link>
-
-                <Link
-                  href="#"
-                  target="_blank"
-                  className="flex max-w-max items-center overflow-hidden rounded-sm"
-                >
-                  <FaDiscord className="h-5 w-5 bg-primary p-1 text-white" />
-                  <span className="bg-secondary px-2 text-sm">Discord</span>
-                </Link>
-
-                <Link
-                  href="https://steamcommunity.com/profiles/76561198418956544/"
-                  target="_blank"
-                  className="flex max-w-max items-center overflow-hidden rounded-sm"
-                >
-                  <FaSteam className="h-5 w-5 bg-primary p-1 text-white" />
-                  <span className="bg-secondary px-2 text-sm">Steam</span>
-                </Link>
-
-                <Link
-                  href="https://www.linkedin.com/in/guhenriquesantos/"
-                  target="_blank"
-                  className="flex max-w-max items-center overflow-hidden rounded-sm"
-                >
-                  <FaLinkedin className="h-5 w-5 bg-primary p-1 text-white" />
-                  <span className="bg-secondary px-2 text-sm">Linkedin</span>
-                </Link>
-
-                <Link
-                  href="https://www.reddit.com/user/gustavohps10"
-                  target="_blank"
-                  className="flex max-w-max items-center overflow-hidden rounded-sm"
-                >
-                  <FaReddit className="h-5 w-5 bg-primary p-1 text-white" />
-                  <span className="bg-secondary px-2 text-sm">Reddit</span>
-                </Link>
-              </div>
-            </DropdownMenuContent>
-          </DropdownMenu>
+            </SheetTrigger>
+            <SheetTitle></SheetTitle>
+            <SheetContent className="w-[280px]">
+              <MenuContent />
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
