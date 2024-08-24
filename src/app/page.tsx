@@ -29,7 +29,7 @@ export default async function Home() {
     <>
       <section
         id="home"
-        className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-gray-950 dark:to-gray-950 lg:h-[95vh]"
+        className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-gray-950 dark:to-gray-950 lg:h-[80vh]"
       >
         <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
           <aside className="flex h-full w-full items-center bg-primary px-12 py-28 lg:w-3/5">
@@ -67,7 +67,7 @@ export default async function Home() {
                 Desenvolvedor Full Stack
               </Motion>
 
-              <div className="mb-12 mt-4 flex items-center gap-4">
+              <div className="mb-12 mt-4 flex flex-wrap items-center gap-4">
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
@@ -140,7 +140,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="about" className="mx-auto h-full max-w-[90rem] px-12 py-28">
+      <section id="about" className="mx-auto h-full max-w-[90rem] px-12 py-20">
         <div className="flex flex-col-reverse flex-wrap items-center justify-center gap-16 lg:flex-row">
           <div className="flex items-center justify-center lg:flex-1">
             <Motion
@@ -198,7 +198,7 @@ export default async function Home() {
       </section>
 
       <section id="skills" className="bg-[#0d102a] text-slate-100">
-        <div className="mx-auto h-full max-w-[90rem] px-12 py-28">
+        <div className="mx-auto h-full max-w-[90rem] px-12 py-20">
           <div className="flex flex-wrap items-center justify-center gap-16">
             <div className="flex flex-col justify-center lg:flex-1">
               <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-slate-200 pb-2 text-5xl font-bold tracking-tight'>
@@ -284,7 +284,7 @@ export default async function Home() {
 
       <section
         id="contact"
-        className="mx-auto h-full max-w-[90rem] px-12 py-40"
+        className="mx-auto h-full max-w-[90rem] px-12 py-20"
       >
         <h2 className='first:mt-0" mx-auto max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
           Bora <span className="text-primary">codar &lt;&frasl;&gt;</span> ?
