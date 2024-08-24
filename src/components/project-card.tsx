@@ -21,11 +21,11 @@ export function ProjectCard({
   return (
     <Card
       key={id}
-      className="group mx-auto flex max-w-[480px] cursor-pointer flex-col justify-between overflow-hidden transition-all duration-150 ease-linear hover:-translate-y-3"
+      className="group flex min-h-[360px] cursor-pointer flex-col justify-between overflow-hidden transition-all duration-150 ease-linear hover:-translate-y-3"
     >
       <CardContent className="p-0">
         <Image
-          className="max-h-44 w-full object-cover brightness-90 group-hover:brightness-100"
+          className="h-52 w-full object-cover brightness-90 group-hover:brightness-100"
           src={image}
           width={500}
           height={300}

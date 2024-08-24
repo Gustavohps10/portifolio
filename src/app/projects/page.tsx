@@ -43,7 +43,7 @@ export default async function Projects() {
           jornada.
         </h3>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-[repeat(auto-fit,400px)] justify-center gap-4">
           {projects.map((project) => (
             <Dialog key={project.id}>
               <DialogTrigger asChild>
