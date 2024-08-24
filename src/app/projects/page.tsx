@@ -22,6 +22,10 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 import { ShieldsBox } from '@/components/shields-box'
 
+import { FiGithub } from 'react-icons/fi'
+import Link from 'next/link'
+import { IoOpenOutline } from 'react-icons/io5'
+
 export const revalidate = 60 * 60 // 1 hour
 
 export const metadata: Metadata = {
@@ -81,7 +85,18 @@ export default async function Projects() {
                 <DialogDescription>{project.longDescription}</DialogDescription>
 
                 <DialogFooter className="sm:justify-start">
-                  <Button>Código fonte</Button>
+                  {project.website && (
+                    <Button asChild>
+                      <Link href={project.website} target="_blank">
+                        <IoOpenOutline className="mr-2" /> Visitar
+                      </Link>
+                    </Button>
+                  )}
+                  <Button asChild variant="secondary">
+                    <Link href={project.github} target="_blank">
+                      <FiGithub className="mr-2" /> Código fonte
+                    </Link>
+                  </Button>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
