@@ -287,8 +287,11 @@ export default async function Home() {
         className="mx-auto h-full max-w-[90rem] px-12 py-40"
       >
         <h2 className='first:mt-0" mx-auto max-w-fit scroll-m-20 border-b pb-2 text-5xl font-bold tracking-tight'>
-          Entre em contato
+          Bora <span className="text-primary">codar &lt;&frasl;&gt;</span> ?
         </h2>
+        <h3 className="mx-auto mt-4 max-w-fit scroll-m-20 pb-2 text-4xl font-medium tracking-tight text-gray-600 first:mt-0 dark:text-gray-200">
+          Me envie uma mensagem
+        </h3>
 
         <form
           className="mx-auto mt-8 max-w-[600px]"
@@ -297,7 +300,7 @@ export default async function Home() {
         >
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name">Nome</Label>
               <Input id="name" placeholder="Digite seu nome" />
             </div>
             <div className="flex flex-col space-y-1.5">
