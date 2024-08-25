@@ -113,7 +113,8 @@ export default async function Home() {
 
               <Button
                 asChild
-                className="duration-50 bg-gray-100 text-[#6b67b0] shadow-md transition-all ease-in hover:bg-gray-100 hover:text-[#2e2b46]"
+                variant="outline"
+                className="dark:bg-[#2e2b46] dark:hover:brightness-90"
               >
                 <Link href="/projects" className="">
                   Meus Projetos <DashboardIcon className="ml-2 h-4" />
@@ -179,7 +180,7 @@ export default async function Home() {
             </p>
 
             <h3 className="mt-6 font-semibold">Hobbies:</h3>
-            <ul className="max-w-[560px] list-disc leading-7 text-slate-400 dark:text-slate-300">
+            <ul className="max-w-[560px] list-disc leading-7 text-gray-500 dark:text-gray-300">
               <li>⚽ Esportes, principalmente futebol</li>
               <li>🎮 Fanático pelo mundo dos games</li>
               <li>🎸 Ouvir uma boa música</li>
@@ -197,33 +198,60 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="skills" className="bg-[#0d102a] text-slate-100">
+      <section
+        id="skills"
+        className="bg-indigo-500 text-gray-100 dark:bg-[#0d102a]"
+      >
         <div className="mx-auto h-full max-w-[90rem] px-12 py-20">
           <div className="flex flex-wrap items-center justify-center gap-16">
             <div className="flex flex-col justify-center lg:flex-1">
-              <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-slate-200 pb-2 text-5xl font-bold tracking-tight'>
+              <h2 className='first:mt-0" max-w-fit scroll-m-20 border-b border-gray-200 pb-2 text-5xl font-bold tracking-tight'>
                 Habilidades
               </h2>
-              <p className="max-w-[560px] leading-7 text-slate-200 [&:not(:first-child)]:mt-6">
+              <p className="max-w-[560px] leading-7 text-white [&:not(:first-child)]:mt-6">
                 Minha jornada no desenvolvimento web começou com a base sólida
-                de <span className="text-[#8b86ee]">HTML</span>,{' '}
-                <span className="text-[#8b86ee]">CSS</span> e{' '}
-                <span className="text-[#8b86ee]">Vanilla JavaScript</span>. Com
-                o tempo, mergulhei no{' '}
-                <span className="text-[#8b86ee]">PHP</span>, aprofundando meu
-                conhecimento em desenvolvimento backend. Atualmente, sou capaz
-                de construir aplicações completas utilizando{' '}
-                <span className="text-[#8b86ee]">Node.js</span>, aplicando as
-                melhores práticas com{' '}
-                <span className="text-[#8b86ee]">React.js</span>,{' '}
-                <span className="text-[#8b86ee]">React Native</span> e{' '}
-                <span className="text-[#8b86ee]">Next.js</span>, além de
-                desenvolver e consumir minhas próprias
-                <span className="text-[#8b86ee]"> APIs REST</span>.
+                de{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">HTML</span>
+                ,{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">CSS</span>{' '}
+                e{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  Vanilla JavaScript
+                </span>
+                . Com o tempo, mergulhei no{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">PHP</span>,
+                aprofundando meu conhecimento em desenvolvimento backend.
+                Atualmente, sou capaz de construir aplicações de ponta a ponta
+                utilizando{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  Node.js
+                </span>{' '}
+                e{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  TypeScript
+                </span>
+                , aplicando as melhores práticas com{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  React
+                </span>
+                ,{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  React Native
+                </span>{' '}
+                e{' '}
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  Next.js
+                </span>
+                , além de desenvolver e consumir minhas próprias
+                <span className="text-[#1d1b2c] dark:text-[#8b86ee]">
+                  {' '}
+                  APIs REST
+                </span>
+                .
               </p>
 
               <h3 className="mt-6 font-semibold">Diferencial:</h3>
-              <ul className="max-w-[560px] list-disc leading-7 text-slate-400 dark:text-slate-300">
+              <ul className="max-w-[560px] list-disc leading-7 text-gray-200 dark:text-gray-400">
                 <li>✨ Clean Code, SOLID, Design Patterns</li>
                 <li>🤳 Layout elegante e responsivo</li>
                 <li>

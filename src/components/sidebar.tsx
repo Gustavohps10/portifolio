@@ -6,7 +6,7 @@ interface SidebarProps {
 
 export function Sidebar({ children }: SidebarProps) {
   return (
-    <div className="fixed z-50 hidden h-screen w-[240px] border p-4 md:block">
+    <div className="fixed z-50 hidden h-screen w-[240px] border bg-[#fbfbfb] p-4 dark:bg-gray-950 md:block">
       <div>{children}</div>
     </div>
   )

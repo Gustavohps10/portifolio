@@ -5,18 +5,18 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer id="social" className="bg-[#0d102a] text-white">
+    <footer id="social" className="bg-indigo-900 text-white dark:bg-[#0d102a]">
       <div className="relative mx-auto flex h-full min-h-[560px] max-w-[90rem] flex-col justify-between p-12">
         <div className="flex flex-wrap gap-12 text-lg">
           <div>
-            <span className="text-gray-500">Contate-me</span>
+            <span className="text-gray-400 dark:text-gray-500">Contate-me</span>
             <ul className="text-gray-200">
               <li>gustavoh.santos735@gmail.com</li>
               <li>(44) 98805-4126</li>
             </ul>
           </div>
           <div>
-            <span className="text-gray-500">Social</span>
+            <span className="text-gray-400 dark:text-gray-500">Social</span>
             <ul className="text-gray-200">
               <li>
                 <Link
