@@ -32,7 +32,7 @@ export default async function Home() {
         className="bg-gradient-to-r from-primary from-60% via-white via-[percentage:20%_90%] to-white to-90% dark:via-gray-950 dark:to-gray-950 lg:h-[80vh]"
       >
         <div className="mx-auto flex h-full max-w-[90rem] flex-wrap items-center">
-          <aside className="flex h-full w-full items-center bg-primary px-12 py-28 lg:w-3/5">
+          <aside className="flex h-full w-full items-center bg-primary bg-center bg-no-repeat px-12 py-28 md:bg-[url('../assets/images/lines.svg')] lg:w-3/5">
             <div className="sm:mx-auto lg:m-0">
               <Motion
                 as="h1"
@@ -71,7 +71,7 @@ export default async function Home() {
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
-                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                    className="border-gray-50 bg-primary text-gray-50 shadow-md"
                   >
                     <TbBrandNodejs className="mr-2 h-5 w-5" /> Node.js
                   </Badge>
@@ -80,7 +80,7 @@ export default async function Home() {
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
-                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                    className="border-gray-50 bg-primary text-gray-50 shadow-md"
                   >
                     <TbBrandPhp className="mr-2 h-5 w-5" /> PHP
                   </Badge>
@@ -88,7 +88,7 @@ export default async function Home() {
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
-                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                    className="border-gray-50 bg-primary text-gray-50 shadow-md"
                   >
                     <TbBrandReact className="mr-2 h-5 w-5" /> React
                   </Badge>
@@ -96,7 +96,7 @@ export default async function Home() {
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
-                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                    className="border-gray-50 bg-primary text-gray-50 shadow-md"
                   >
                     <RiNextjsLine className="mr-2 h-5 w-5" /> Next.js
                   </Badge>
@@ -104,7 +104,7 @@ export default async function Home() {
                 <Motion {...badgeAnimations}>
                   <Badge
                     variant="outline"
-                    className="border-gray-50 bg-transparent text-gray-50 shadow-md"
+                    className="border-gray-50 bg-primary text-gray-50 shadow-md"
                   >
                     <TbApi className="mr-2 h-5 w-5" /> REST
                   </Badge>
